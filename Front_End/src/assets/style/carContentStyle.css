@@ -1,0 +1,16 @@
+/**
+    * @author _ Pathum_Kaleesha 2022-07-19 - 23.41 
+    * @since - v0.1.0
+**/
+#offcanvasWithBothOptions{
+    width: 300px;
+    top: 11%;
+    bottom: 0;
+}
+#offcanvasWithBothOptionsLabel{
+color: red;
+    font-size: 28px;
+}
+.carousel-item{
+    background-size: 100%;
+}

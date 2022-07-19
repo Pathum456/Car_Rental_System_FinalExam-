@@ -1,0 +1,44 @@
+/**
+    * @author _ Pathum_Kaleesha
+    * @since - v0.1.0
+**/
+
+/*Nav Bar*/
+body{
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.nav-item {
+
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+body >section> nav > div > a {
+    color: skyblue !important;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+.navtop {
+    background: rgb(30, 30, 30);
+    opacity: 0.8;
+}
+
+.navigation:hover {
+    color: red !important;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+

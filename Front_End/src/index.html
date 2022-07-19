@@ -1,0 +1,166 @@
+<!--
+/**
+    * @author _ Pathum_Kaleesha
+    * @since - v0.1.0 
+**/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Car Rental System</title>
+    <link href="assets/images/carLogo.png" rel="icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+    <link href="assets/style/style.css" rel="stylesheet">
+    <link href="assets/style/dashBoardContentStyle.css" rel="stylesheet">
+    <link href="assets/style/carContentStyle.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-size: 100%;
+        }
+
+        #bgImageDashBoardDiv {
+            width: 100vw;
+            height: 100vh;
+            background: url("assets/images/CarSystemBGImage.jpg");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<!--Navigation Section Start-->
+<section>
+    <nav class="navbar navbar-expand-lg  navbar-dark navtop">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="">Easy Car-Rental System</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active navigation" href="#" id="linkHome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation" href="#" id="linkCar">Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation" href="#" id="linkItem">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation" href="#" id="linkOrder">Login</a>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</section>
+<!--Navigation Section End-->
+
+<!-- ========================= -->
+
+<!--Dash Board Content Start-->
+<section class="container-fluid" id="dashBoardContent">
+    <div id="bgImageDashBoardDiv">
+        <div id="descriptionDiv">
+            <h1 id="descriptionDashBoardH1">Fast & Easy Way To Rent A Car</h1>
+            <h1 id="description2">Relaxed Journey Ever</h1>
+        </div>
+        <div id="dashRentCarBtnDiv">
+            <button id="rentCarBtnDashBoard" type="button">RENT CAR NOW</button>
+        </div>
+
+        <div id="contactInfo">
+            <h4 id="cInfo">Call Now : +94-912227465</h4>
+        </div>
+    </div>
+
+</section>
+<!--Dash Board Content End-->
+
+<!-- ========================= -->
+
+<!--Car Content Start-->
+<section class="container-fluid" id="carContent">
+
+        <!--<div id="cateDiv"><h3 id="cateH3">Categories</h3></div>-->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Car Catergories</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><u>CAR Catergories</u></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div></div>
+            </div>
+        </div>
+    <div class="card" style="width: 18rem;">
+       <!-- <img src="assets/images/cars/BMWFrontSide.jpg" class="card-img-top" alt="...">-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/cars/BMWFrontSide.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/cars/bmwInsideFrontView.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/cars/bmwInsideViewBack.jpg" class="d-block w-100" alt="...">
+                </div> <div class="carousel-item">
+                    <img src="assets/images/cars/bmw4.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+
+</section>
+<!--Car Content End-->
+
+<script src="assets/boostrap/js/bootstrap.bundle.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $("#dashBoardContent").css("display", "none");
+    $("#carContent").css("display", "block");
+    $("#linkCar").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#carContent").css("display", "block");
+    });
+    $("#linkHome").click(function () {
+        $("#dashBoardContent").css("display", "block");
+        $("#carContent").css("display", "none");
+    });
+</script>
+</body>
+</html>
