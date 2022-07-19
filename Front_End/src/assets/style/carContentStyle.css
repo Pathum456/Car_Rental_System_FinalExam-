@@ -24,14 +24,25 @@ color: red;
 #car1{
     position: absolute;
     display: flex;
-    margin-left: 1%;
+    margin-left: 2%;
     margin-top: 1%;
 
 }
 #car2{
     position: absolute;
     display: flex;
-    margin-left: 24%;
+    margin-left: 27%;
+    margin-top: 1%;
+}
+#car3{
+    position: absolute;
+    display: flex;
+    margin-left: 52%;
+    margin-top: 1%;
+}#car4{
+    position: absolute;
+    display: flex;
+    margin-left: 77%;
     margin-top: 1%;
 }
 .rentCarBtn{

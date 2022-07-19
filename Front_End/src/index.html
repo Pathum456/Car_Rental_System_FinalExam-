@@ -200,6 +200,100 @@
             </div>
         </div>
     </div>
+    <div id="car3" class="car">
+        <div class="card car1D" style="width: 18rem;" >
+            <!-- <img src="assets/images/cars/BMWFrontSide.jpg" class="card-img-top" alt="...">-->
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade3">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SuzukiAlto1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA3.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA2.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA4.jpg">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleFade3"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleFade3"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">BMW 5 Series 2015</h5>
+                <p class="card-text">Good Condition,  maximum speed is 140kmph..
+                    Rent Price for 30 days 870$.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                <li class="list-group-item">Price : <b>$29/day</b></li>
+            </ul>
+            <div class="card-body">
+
+                <button class="card-link rentCarBtn" href="#" >RENT CAR</button>
+
+            </div>
+        </div>
+    </div>
+    <div id="car4" class="car">
+        <div class="card car1D" style="width: 18rem;" >
+            <!-- <img src="assets/images/cars/BMWFrontSide.jpg" class="card-img-top" alt="...">-->
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade4">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SuzukiAlto1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA3.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA2.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="..." class="d-block w-100" src="assets/images/cars/SA4.jpg">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleFade4"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleFade4"
+                        type="button">
+                    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">BMW 5 Series 2015</h5>
+                <p class="card-text">Good Condition,  maximum speed is 140kmph..
+                    Rent Price for 30 days 870$.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
+                <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
+                <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
+                <li class="list-group-item">Price : <b>$29/day</b></li>
+            </ul>
+            <div class="card-body">
+
+                <button class="card-link rentCarBtn" href="#" >RENT CAR</button>
+
+            </div>
+        </div>
+    </div>
 
 </section>
 <!--Car Content End-->
@@ -207,9 +301,12 @@
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
-    $("#dashBoardContent").css("display", "none");
-    $("#carContent").css("display", "block");
+    $("#dashBoardContent").css("display", "block");
+
     $("#linkCar").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#carContent").css("display", "block");
+    });$("#rentCarBtnDashBoard").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#carContent").css("display", "block");
     });
@@ -217,6 +314,7 @@
         $("#dashBoardContent").css("display", "block");
         $("#carContent").css("display", "none");
     });
+
 </script>
 </body>
 </html>
