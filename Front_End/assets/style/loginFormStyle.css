@@ -1,0 +1,27 @@
+/**
+    * @author _ Pathum_Kaleesha 2022-07-20 - 18.53 
+    * @since - v0.1.0
+**/
+#loginForm{
+    width: 28vw;
+    height: 510px;
+    position: absolute;
+    right: 1%;
+    top: 40px;
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(45deg, black, transparent);
+border-radius: 1rem;
+    z-index: 100000000
+}
+#loginCloseBtn:hover{
+    background: red;
+}
+#loginCloseBtn{
+    position: absolute;
+    right: 0;
+    z-index: 1000000000;
+}
+.card{
+    background:transparent;
+}

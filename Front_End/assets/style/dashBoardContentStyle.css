@@ -1,0 +1,86 @@
+/**
+    * @author _ Pathum_Kaleesha
+    * @since - v0.1.0
+**/
+#dashBoardContent {
+    width: 100vw;
+    height: 100vh;
+    background: 100%;
+}
+
+#descriptionDiv {
+    position: absolute;
+    left: 0;
+    right: 179px;
+    top: 0;
+    bottom: 49%;
+    margin: auto;
+    width: 41vw;
+    height: 7vh;
+    z-index: 10000;
+}
+
+#descriptionDashBoardH1 {
+    font-style: oblique;
+    font-variant-caps: small-caps;
+    color: revert;
+
+    right: 150px;
+}
+
+#description2 {
+    font-style: oblique;
+    font-variant-caps: small-caps;
+    color: revert;
+    position: absolute;
+    top: 64px;
+    right: -69px;
+}
+
+#contactInfo {
+    width: 288px;
+    height: 24px;
+    background: transparent;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+
+}
+
+#cInfo {
+    color: black;
+}
+
+#dashRentCarBtnDiv {
+    position: absolute;
+    right: 100px;
+    bottom: 200px;
+    width: 133px;
+    background: yellow;
+    animation-name: rentNow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rentNow {
+    0% {
+        transform: rotate(20deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+#rentCarBtnDashBoard {
+    background: transparent;
+}
