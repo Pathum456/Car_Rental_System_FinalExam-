@@ -17,13 +17,22 @@
     <link href="assets/style/dashBoardContentStyle.css" rel="stylesheet">
     <link href="assets/style/carContentStyle.css" rel="stylesheet">
     <link href="assets/style/loginFormStyle.css" rel="stylesheet">
+    <link href="assets/style/signUpForm.css" rel="stylesheet">
 
     <style>
 
         body {
-            width: 100vw;
-            height: 100vh;
+
             background-size: 100%;
+        }
+
+        #carThumbnail {
+            width: 100vw;
+            height: 90vh;
+            background: green;
+            background: url("assets/images/carThumbnail.jpg");
+            background-size: 100% 100%;
+            position: absolute;
         }
 
         #bgImageDashBoardDiv {
@@ -51,7 +60,7 @@
                         <a aria-current="page" class="nav-link active navigation" href="#" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#" id="linkCar">Car</a>
+                        <a class="nav-link navigation" href="#" id="linkCar">Cars</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation" href="#" id="linkRegistration">Registration</a>
@@ -107,6 +116,10 @@
            </div>
        </div>
    -->
+    <div id="carThumbnail">
+        <h1 id="carTittle">Choose Your Car</h1>
+    </div>
+
     <div class="car" id="car1">
         <div class="card car1D" style="width: 18rem;">
             <!-- <img src="assets/images/cars/BMWFrontSide.jpg" class="card-img-top" alt="...">-->
@@ -303,54 +316,66 @@
 
 <!--Login form Content Start-->
 <section class="container-fluid">
-    <div id="loginForm" >
+    <div id="loginForm">
         <div class="gradient-custom  justify-content-center align-items-center">
             <button class="btn-close" data-bs-dismiss="offcanvas" id="loginCloseBtn" type="button"></button>
-                <div class="card text-white" style="border-radius: 1rem;">
-                    <div class="card-body p-2 text-center ">
+            <div class="card text-white" style="border-radius: 1rem;">
+                <div class="card-body p-2 text-center ">
 
-                        <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                        <p class="text-white-50 mb-3">Please enter your email and password!</p>
-                        <div class="form-outline form-white mb-4">
-                            <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                            <label class="form-label" for="typeEmailX">Email</label>
-                        </div>
-                        <div class="form-outline form-white mb-4">
-                            <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                            <label class="form-label" for="typePasswordX">Password</label>
-                        </div>
-                        <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-3">Please enter your email and password!</p>
+                    <div class="form-outline form-white mb-4">
+                        <input class="form-control form-control-lg" id="typeEmailX" type="email"/>
+                        <label class="form-label" for="typeEmailX">Email</label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                        <input class="form-control form-control-lg" id="typePasswordX" type="password"/>
+                        <label class="form-label" for="typePasswordX">Password</label>
+                    </div>
+                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                    <button class="btn btn-outline-light btn-lg px-5" id="loginCheckBtn" type="submit">Login</button>
 
-                        <div class="d-flex justify-content-center text-center mt-4 pt-1">
-                            <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                            <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
-                            <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
-                        </div>
-                        <div>
-                            <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
-                            </p>
-                        </div>
+                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                        <a class="text-white" href="#!"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a class="text-white" href="#!"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                        <a class="text-white" href="#!"><i class="fab fa-google fa-lg"></i></a>
+                    </div>
+                    <div>
+                        <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="#!">Sign Up</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--Login form Content End-->
+
+<!-- ========================= -->
+
+<!--SingUp form Content Start-->
+<section id="signUpForm">
+    <div></div>
+</section>
+<!--SingUp form Content Start-->
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
+    $("#carContent").css("display", "none");
 
+    var uEmail = $("#typeEmailX").val();
+    var passWord = $("#typePasswordX").val();
     $("#linkCar").click(function () {
+        /*$("#loginForm").css("display", "block");*/
         $("#dashBoardContent").css("display", "none");
         $("#carContent").css("display", "block");
+        $("#loginForm").css("display", "none");
     });
     $("#rentCarBtnDashBoard").click(function () {
-        $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block");
+        $("#loginForm").css("display", "block");
     });
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
@@ -360,10 +385,19 @@
     $("#linkLogin").click(function () {
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#loginForm").css("display", "block");
-    });$("#loginCloseBtn").click(function () {
+    });
+    $("#loginCloseBtn").click(function () {
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#loginForm").css("display", "none");
     });
+    /*$("#loginCheckBtn").click(function () {
+        if ($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user123") {
+            $("#dashBoardContent").css("display", "none");
+            $("#carContent").css("display", "block");
+            $("#loginForm").css("display", "none");
+        }
+    });*/
+
 </script>
 </body>
 </html>
