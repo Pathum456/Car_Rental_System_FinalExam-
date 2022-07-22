@@ -20,6 +20,9 @@
     <link href="assets/style/signUpForm.css" rel="stylesheet">
 
     <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
 
         body {
 
@@ -45,7 +48,7 @@
 </head>
 <body>
 <!--Navigation Section Start-->
-<section>
+<section id="navbar">
     <nav class="navbar navbar-expand-lg  navbar-dark navtop">
         <div class="container-fluid">
             <a class="navbar-brand " href="">Easy Car-Rental System</a>
@@ -106,7 +109,7 @@
     <div id="carThumbnail">
         <h1 id="carTittle">Choose Your Car</h1>
     </div>
-    <div class="col-12" id="carTable">
+    <div class="col bg-transparent" id="carTable">
         <table class="table table-bordered table-hover">
             <thead class="bg-danger text-white">
             <tr>
@@ -149,9 +152,9 @@
                         </button>
                     </div>
                 </td>
-                <td class="col-3">
+                <td class="col-3 ">
                     <div class="card-body">
-                        <h5 class="card-title">BMW 5 Series 2015 </h5>
+                        <h5 class="card-title ">BMW 5 Series 2015 </h5>
                         <p class="card-text">Good Condition, 250 max speed.
                             Rent Price for 30 days 2300$.</p>
                     </div>
@@ -161,12 +164,11 @@
                         <li class="list-group-item">No of Passengers : <b>5 seats</b></li>
                         <li class="list-group-item">Transmission Type : <b>Automatic</b></li>
                         <li class="list-group-item">Fuel Type : <b> Petrol</b></li>
-                        <li class="list-group-item">Price : <b>$79/day</b></li>
                     </ul>
                 </td>
                 <td class="col-2">
                     <ul>
-                        <li class="list-group-item">Price : <b>$79/day</b></li>
+                        <li class="list-group-item"><b>$79/day</b></li>
                     </ul>
                 </td>
                 <td class="col-1">
@@ -220,7 +222,7 @@
                 </td>
                 <td class="col-2">
                     <ul>
-                        <li class="list-group-item">Price : <b>$29/day</b></li>
+                        <li class="list-group-item"><b>$29/day</b></li>
                     </ul>
                 </td>
                 <td class="col-1">
@@ -274,7 +276,7 @@
                 </td>
                 <td class="col-2">
                     <ul>
-                        <li class="list-group-item">Price : <b>$35/day</b></li>
+                        <li class="list-group-item"><b>$35/day</b></li>
                     </ul>
                 </td>
                 <td class="col-1">
@@ -298,12 +300,14 @@
                                 <img alt="..." class="d-block w-100 carImg" src="assets/images/cars/chr4.jpeg">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleFade4"
+                        <button class="carousel-control-prev" data-bs-slide="prev"
+                                data-bs-target="#carouselExampleFade4"
                                 type="button">
                             <span aria-hidden="true" class="carousel-control-prev-icon"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleFade4"
+                        <button class="carousel-control-next" data-bs-slide="next"
+                                data-bs-target="#carouselExampleFade4"
                                 type="button">
                             <span aria-hidden="true" class="carousel-control-next-icon"></span>
                             <span class="visually-hidden">Next</span>
@@ -327,7 +331,7 @@
                 </td>
                 <td>
                     <ul>
-                        <li class="list-group-item">Price : <b>$55/day</b></li>
+                        <li class="list-group-item"><b>$55/day</b></li>
                     </ul>
                 </td>
                 <td>
@@ -347,7 +351,7 @@
 <section class="container-fluid">
     <div id="loginForm">
         <div class="gradient-custom  justify-content-center align-items-center">
-            <button class="btn-close" data-bs-dismiss="offcanvas" id="loginCloseBtn" type="button"></button>
+            <button class="btn-close bg-white" data-bs-dismiss="offcanvas" id="loginCloseBtn" type="button"></button>
             <div class="card text-white" style="border-radius: 1rem;">
                 <div class="card-body p-2 text-center ">
 
@@ -373,7 +377,7 @@
                         <a class="text-white" href="#!"><i class="fab fa-google fa-lg"></i></a>
                     </div>
                     <div>
-                        <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="#!">Sign Up</a>
+                        <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="#signUp" id="newUser">Sign Up</a>
                         </p>
                     </div>
                 </div>
@@ -386,16 +390,101 @@
 <!-- ========================= -->
 
 <!--SingUp form Content Start-->
-<section id="signUpForm">
-    <div></div>
+<section class="container-fluid" id="signUp">
+    <div id="signUpImage">
+        <button class="btn-close " data-bs-dismiss="offcanvas" id="signCloseBtn" type="button"></button>
+        <section class="container-fluid p-3  text-white">
+            <h1 class="fw-bold">New User Registration</h1>
+        </section>
+        <section class="container-fluid mt-3">
+            <!--    customer save-->
+            <div class="row mt-3">
+                <div class="col-4">
+                    <form id="customerForm">
+                        <section id="sec1">
+                            <div class="mb-3">
+                                <label class="form-label" for="cusID">User ID</label>
+                                <input class="form-control" id="cusID" name="id" placeholder="User ID" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cusName">User Name</label>
+                                <input class="form-control" id="cusName" name="name" placeholder="User Name"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cusAddress">User Address</label>
+                                <input class="form-control" id="cusAddress" name="address" placeholder="User Address"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cusContact">Contact No</label>
+                                <input class="form-control" id="cusContact" name="Contact" placeholder="Contact No"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cusEmail">Email</label>
+                                <input class="form-control" id="cusEmail" name="Email" placeholder="Email"
+                                       type="text">
+                            </div>
+                        </section>
+                        <section id="sec2">
+                            <div class="mb-3">
+                                <label class="form-label" for="cusNic">NIC No</label>
+                                <input class="form-control" id="cusNic" name="NIC" placeholder="NIC No"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" id="imgNiCFront" name="imgFrontView" type="file">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" id="imgNiCBack" name="imgBackView" type="file">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cusLicence">Licence No</label>
+                                <input class="form-control" id="cusLicence" name="Licence" placeholder="Licence No"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" id="imgLicence" name="imgLicence" type="file">
+                            </div>
+
+                        </section>
+
+                        <section id="sec3">
+
+                            <div class="mb-3">
+                                <label class="form-label" for="cusUserName">User Name</label>
+                                <input class="form-control" id="cusUserName" name="UserName" placeholder="User Name"
+                                       type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="password">Password</label>
+                                <input class="form-control" id="password" name="Password" placeholder="Password"
+                                       type="text">
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-success " id="registerBtn" type="button">Register</button>
+                            </div>
+                        </section>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
 </section>
 <!--SingUp form Content Start-->
+
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
     $("#carContent").css("display", "none");
+    $("#signUp").css("display", "none");
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
@@ -410,6 +499,7 @@
     });
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
+        $("#rentCarBtnDashBoard").css("display", "block");
         $("#carContent").css("display", "none");
     });
 
@@ -421,6 +511,12 @@
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#loginForm").css("display", "none");
     });
+    $("#linkRegistration").click(function () {
+        $("#signUp").css("display", "block");
+        $("#navbar").css("display", "none");
+        $("#rentCarBtnDashBoard").css("display", "none");
+
+    });
     /*$("#loginCheckBtn").click(function () {
         if ($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user123") {
             $("#dashBoardContent").css("display", "none");
@@ -428,6 +524,31 @@
             $("#loginForm").css("display", "none");
         }
     });*/
+    $("#signCloseBtn").click(function () {
+        $("#signUp").css("display", "none");
+        $("#navbar").css("display", "block");
+        $("#rentCarBtnDashBoard").css("display", "block");
+
+    });
+    $("#registerBtn").click(function () {
+       /* if (!$("#cusID").val()===("") && !$("#cusName").val()==="" && !$("#cusAddress").val()==="" && !$("#cusContact").val() && !$("#cusEmail").val() && !$("#cusNic").val() && !$("#imgNiCFront").val() && !$("#imgNiCBack").val() && !$("#cusLicence").val() && !$("#imgLicence").val() && !$("#cusUserName").val() && !$("#password").val()) {
+            alert(
+                "Please fill all Field in Registration Form"
+            );
+        } else {
+            alert("registered")
+        }*/
+        $("#navbar").css("display", "block");
+        $("#signUp").css("display", "none");
+        $("#dashBoardContent").css("display", "none");
+        $("#carContent").css("display","block")
+    });
+    $("#newUser").click(function () {
+        $("#navbar").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#rentCarBtnDashBoard").css("display", "none");
+        $("#signUp").css("display", "block");
+    })
 
 </script>
 </body>

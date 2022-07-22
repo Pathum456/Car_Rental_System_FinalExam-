@@ -28,5 +28,7 @@
 
 #carTable{
     position: absolute;
-    margin-top: 50%;
+    margin-top: 47%;
+    right: 1%;
+    left: 1%;
 }
