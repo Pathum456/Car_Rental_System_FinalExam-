@@ -18,6 +18,7 @@
     <link href="assets/style/carContentStyle.css" rel="stylesheet">
     <link href="assets/style/loginFormStyle.css" rel="stylesheet">
     <link href="assets/style/signUpForm.css" rel="stylesheet">
+    <link href="assets/style/servicesFormStyle.css" rel="stylesheet">
 
     <style>
         body::-webkit-scrollbar {
@@ -37,11 +38,33 @@
             background-size: 100% 100%;
             position: absolute;
         }
+        #serviceThumbnail {
+            width: 100vw;
+            height: 90vh;
+            background: green;
+            background: url("assets/images/carThumbnail.jpg");
+            background-size: 100% 100%;
+            position: absolute;
+        }
 
         #bgImageDashBoardDiv {
             width: 100vw;
             height: 100vh;
             background: url("assets/images/CarSystemBGImage.jpg");
+            background-size: 100% 100%;
+        }
+
+        #divIcon1 {
+            background: url("assets/images/icons/wedding-couple.png");
+            background-size: 100% 100%;
+        }#divIcon2 {
+            background: url("assets/images/icons/cityTranfer.png");
+            background-size: 100% 100%;
+        }#divIcon3 {
+            background: url("assets/images/icons/transport.png");
+            background-size: 100% 100%;
+        }#divIcon4 {
+            background: url("assets/images/icons/florida.png");
             background-size: 100% 100%;
         }
     </style>
@@ -63,10 +86,13 @@
                         <a aria-current="page" class="nav-link active navigation" href="#" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#" id="linkCar">Cars</a>
+                        <a class="nav-link navigation" href="#" id="linkCar">Car Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#" id="linkRegistration">Registration</a>
+                        <a class="nav-link navigation" href="#" id="linkServices">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation" href="#" id="linkRegistration">SignUp</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation" href="#" id="linkLogin">Login</a>
@@ -377,7 +403,8 @@
                         <a class="text-white" href="#!"><i class="fab fa-google fa-lg"></i></a>
                     </div>
                     <div>
-                        <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="#signUp" id="newUser">Sign Up</a>
+                        <p class="mb-0">Don't have an account? <a class="text-white-50 fw-bold" href="#signUp"
+                                                                  id="newUser">Sign Up</a>
                         </p>
                     </div>
                 </div>
@@ -478,6 +505,65 @@
 </section>
 <!--SingUp form Content Start-->
 
+<!-- ========================= -->
+
+<!--Services Form Start-->
+<section class="container-fluid" id="serviceContent">
+    <div id="serviceThumbnail" >
+        <h1 id="serviceTittle">Services</h1>
+    </div>
+    <div class="row" id="serviceInfoDiv">
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon1"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Wedding Ceremony</h3>
+                    <p class="lh-lg">If you're one of the people who has always wanted to have a grand wedding and arrive in style, this is the article for you. Sit back and relax because we're here to scratch off a task from your wedding to-do list and take some load off.  Here is a listicle of some wedding car hire services that will give you a lavish and comfortable transport experience. Be it your market sprees or picking your guests up, they won't disappoint you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon2"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">City Transfer</h3>
+                    <p class="lh-lg">According to our data, Easy Car-Rental is the cheapest rental car agency in Sri Lanka. Users who book a rental car with Easy Car-Rental often find prices below the $43 average daily rate each day. Depending on the city you visit, what type of car you’re interested in, and the length of your rental, you could find prices for as low as $28 each day when booking with Easy Car-Rental.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon3"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Airport Transfer</h3>
+                    <p class="lh-lg">We wait for you at the airport to take you to your accommodation by private transport. 24/7 service from or to the airport at any time you need it. Book your transfer. Make A Booking. 24/7 E-Mail Support. Services: All payment options, 24 hours service, Car, SUV.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center"><div id="divIcon4" class="divIcon"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Whole City Tour</h3>
+                    <p class="lh-lg">fascinating journey through the vibes & sounds of a multicultural, multi-religion capital. Crowded street markets, slums and uprising urban lifestyle of the war-torn country. We are taking you to witness Colombo as it is, through its Victorian architecture, its monasteries and Kovils. Bargain street markets and chic joints. All to remember and take good memories of Sri Lanka with you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Services Form End-->
+
+<!-- ========================= -->
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
@@ -485,6 +571,7 @@
     $("#loginForm").css("display", "none");
     $("#carContent").css("display", "none");
     $("#signUp").css("display", "none");
+    $("#serviceContent").css("display", "none");
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
@@ -493,6 +580,7 @@
         $("#dashBoardContent").css("display", "none");
         $("#carContent").css("display", "block");
         $("#loginForm").css("display", "none");
+        $("#serviceContent").css("display", "none");
     });
     $("#rentCarBtnDashBoard").click(function () {
         $("#loginForm").css("display", "block");
@@ -531,24 +619,31 @@
 
     });
     $("#registerBtn").click(function () {
-       /* if (!$("#cusID").val()===("") && !$("#cusName").val()==="" && !$("#cusAddress").val()==="" && !$("#cusContact").val() && !$("#cusEmail").val() && !$("#cusNic").val() && !$("#imgNiCFront").val() && !$("#imgNiCBack").val() && !$("#cusLicence").val() && !$("#imgLicence").val() && !$("#cusUserName").val() && !$("#password").val()) {
-            alert(
-                "Please fill all Field in Registration Form"
-            );
-        } else {
-            alert("registered")
-        }*/
+        /* if (!$("#cusID").val()===("") && !$("#cusName").val()==="" && !$("#cusAddress").val()==="" && !$("#cusContact").val() && !$("#cusEmail").val() && !$("#cusNic").val() && !$("#imgNiCFront").val() && !$("#imgNiCBack").val() && !$("#cusLicence").val() && !$("#imgLicence").val() && !$("#cusUserName").val() && !$("#password").val()) {
+             alert(
+                 "Please fill all Field in Registration Form"
+             );
+         } else {
+             alert("registered")
+         }*/
         $("#navbar").css("display", "block");
         $("#signUp").css("display", "none");
         $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display","block")
+        $("#carContent").css("display", "block")
     });
     $("#newUser").click(function () {
         $("#navbar").css("display", "none");
         $("#loginForm").css("display", "none");
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#signUp").css("display", "block");
+    });
+    $("#linkServices").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#serviceContent").css("display", "block");
+
     })
+
 
 </script>
 </body>

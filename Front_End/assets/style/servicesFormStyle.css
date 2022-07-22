@@ -1,0 +1,22 @@
+/**
+    * @author _ Pathum_Kaleesha
+    * @since - v0.1.0
+**/
+.divIcon{
+    width: 150px;
+    height: 150px;
+    background: lightblue;
+    border-radius: 100%;
+   border: 1px solid black;
+}
+#serviceTittle{
+    position: absolute;
+    left: 1%;
+    right: 1%;
+    bottom: 10%;
+    color: white;
+}
+#serviceInfoDiv{
+    position: absolute;
+    top: 110%;
+}
