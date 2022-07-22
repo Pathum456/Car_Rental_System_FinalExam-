@@ -6,37 +6,8 @@
 #carContent{
 
 }
-.car{
-    height: 80vh;
-    margin-top: 53%;
-}
-.car1D{
-    background: #3dd5f3;
-}
-#car1{
-    position: absolute;
-    margin-left: 2%;
-
-
-}
-#car2{
-    position: absolute;
-    margin-left: 27%;
-
-}
-#car3{
-    position: absolute;
-    display: flex;
-    margin-left: 52%;
-
-}#car4{
-    position: absolute;
-    margin-left: 77%;
-
-}
 .rentCarBtn{
     position: absolute;
-    left: 25%;
     background: yellow;
     animation-name: rentNow;
     animation-duration: 10s;
@@ -55,3 +26,7 @@
     color: white;
 }
 
+#carTable{
+    position: absolute;
+    margin-top: 50%;
+}
