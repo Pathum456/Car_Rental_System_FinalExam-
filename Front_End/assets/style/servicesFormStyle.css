@@ -9,7 +9,7 @@
     border-radius: 100%;
    border: 1px solid black;
 }
-#serviceTittle{
+.serviceTittle{
     position: absolute;
     left: 1%;
     right: 1%;

@@ -19,6 +19,7 @@
     <link href="assets/style/loginFormStyle.css" rel="stylesheet">
     <link href="assets/style/signUpForm.css" rel="stylesheet">
     <link href="assets/style/servicesFormStyle.css" rel="stylesheet">
+    <link href="assets/style/aboutFormStyle.css" rel="stylesheet">
 
     <style>
         body::-webkit-scrollbar {
@@ -38,7 +39,7 @@
             background-size: 100% 100%;
             position: absolute;
         }
-        #serviceThumbnail {
+        .serviceThumbnail {
             width: 100vw;
             height: 90vh;
             background: green;
@@ -80,6 +81,10 @@
             width: 82%;
             background-size: 100% 100%;
         }
+        #welcomeImgDiv{
+            background: url("assets/images/carThumbnail.jpg");
+            background-size: 100% 100%;
+        }
     </style>
 </head>
 <body>
@@ -99,11 +104,15 @@
                         <a aria-current="page" class="nav-link active navigation" href="#" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation" href="#" id="linkCar">Car Details</a>
+                        <a class="nav-link navigation" href="#" id="linkAbout">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation" href="#" id="linkServices">Services</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link navigation" href="#" id="linkCar">Car Details</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link navigation" href="#" id="linkRegistration">SignUp</a>
                     </li>
@@ -522,12 +531,12 @@
 
 <!--Services Form Start-->
 <section class="container-fluid" id="serviceContent">
-    <div id="serviceThumbnail" >
-        <h1 id="serviceTittle">Our Services</h1>
+    <div class="serviceThumbnail" >
+        <h1 class="serviceTittle">Our Services</h1>
     </div>
     <div class="row justify-content-center" id="serviceInfoTitle">
         <div class="col">
-            <h3 class="text-primary "id="services2">SERVICES</h3>
+            <h3 class="text-primary " id = "services2">SERVICES</h3>
             <h1><strong>Our Latest Services</strong></h1>
         </div>
     </div>
@@ -633,6 +642,66 @@
 <!--Services Form End-->
 
 <!-- ========================= -->
+
+<!--About Content Form Start-->
+<section class="container-fluid" id="aboutContent">
+    <div class="serviceThumbnail " >
+        <h1 class="serviceTittle text-white"><b>About Us</b></h1>
+    </div>
+    <div class="row" id="welcomeTestDiv">
+    <div id="subTitleAbout"><h6 class="text-white">ABOUT US</h6></div>
+        <div id="titleAbout" class="justify-content-center">
+            <h2 class="text-white justify-content-center">Welcome to Car-Rental System</h2>
+            <p class="text-white aboutDescription" >A career at Easy Car-Rental  is all about the journey, helping you explore new challenges in a place where you can be your best self. With plenty of exciting twists, turns and opportunities along the way.</p>
+            <p class="text-white aboutDescription">We’ve always been pioneers, on a mission to shape the future of travel through cutting edge technology, to make it easier for everyone to enjoy amazing experiences wherever they go. Under a desert sky, or in the heart of a bustling city. Discovering the perfect hideaway, or the perfect paella.</p>
+            <p class="text-white aboutDescription">That’s why we’re always looking for people who search for better solutions, the ones eager to stray off the beaten path to find new ways of doing things. Because at Easy Car-Rental  it’s more than a job, it’s a journey.</p>
+            <button class=" " id="lookCarBtn" type="button">Look For Car</button>
+        </div>
+    </div>
+    <div class="row" id="welcomeImgDiv"></div>
+
+    <div class="row justify-content-center mb-5" id="clientTitle">
+        <h1 class="text-black justify-content-center cTitle">Happy Customers</h1>
+    </div>
+    <!------------->
+<div id="happyCustomerDetails" class="container">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="assets/images/cus1.jpeg" class="card-img-top happyImg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mery Joysap</h5>
+                    <p class="card-text customerFeedback">Everything was good with my trip, I am very glad that i booked car from Easy Car-Rental for my first time and sure wont be the last cause is very easy to take and return the car.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="assets/images/cus2.jpeg" class="card-img-top happyImg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dean Michael </h5>
+                    <p class="card-text customerFeedback">All went very smoothly, both during booking, pick-up and return of the car. Fortunately, there was no need of any kind of special assistance during the trip.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="assets/images/cus3.jpeg" class="card-img-top happyImg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Robert Andrew</h5>
+                    <p class="card-text customerFeedback">I was very satisfied with the service provided by Easy Car_Rental. In very way you were extremely efficient, helpful and courteous. The staff was very friendly and efficient. The car received was excellent. I will definitely use your services again wherever I may be travelling to.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--About Content Form End-->
+
+<!-- ========================= -->
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
@@ -641,6 +710,7 @@
     $("#carContent").css("display", "none");
     $("#signUp").css("display", "none");
     $("#serviceContent").css("display", "none");
+    $("#aboutContent").css("display", "none");
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
@@ -650,6 +720,7 @@
         $("#carContent").css("display", "block");
         $("#loginForm").css("display", "none");
         $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
     });
     $("#rentCarBtnDashBoard").click(function () {
         $("#loginForm").css("display", "block");
@@ -658,11 +729,13 @@
         $("#dashBoardContent").css("display", "block");
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#carContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#loginForm").css("display", "block");
+
     });
     $("#loginCloseBtn").click(function () {
         $("#rentCarBtnDashBoard").css("display", "block");
@@ -710,8 +783,15 @@
         $("#dashBoardContent").css("display", "none");
         $("#carContent").css("display", "none");
         $("#serviceContent").css("display", "block");
+        $("#aboutContent").css("display", "none");
 
-    })
+    }); $("#linkAbout").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "block");
+
+    });
 
 
 </script>

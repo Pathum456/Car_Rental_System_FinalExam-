@@ -1,0 +1,78 @@
+/**
+    * @author _ Pathum_Kaleesha 2022-07-23 - 16.27 
+    * @since - v0.1.0
+**/
+#welcomeTestDiv{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 38%;
+    top: 101%;
+    background: #01d28e;
+}#welcomeImgDiv{
+    position: absolute;
+    width: 42vw;
+    height: 75vh;
+    left: 10%;
+border-radius: 1rem;
+    top: 118%;
+    background: green;
+}
+ #subTitleAbout{
+     position: absolute;
+     width: 150px;
+     height: 38px;
+     top: 18%;
+     left: 18%;
+
+
+ }#titleAbout{
+     position: absolute;
+     width: 40%;
+     height: 70%;
+     top: 23%;
+     left: 18%;
+ }
+.aboutDescription{
+
+    margin-top: 5%;
+}
+#lookCarBtn{
+    width: 150px;
+    height: 50px;
+    background: #1089ff !important;
+    border: 1px solid #1089ff !important;
+    color: #fff !important;
+
+}
+#clientTitle {
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    top: 210%;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+.cTitle{
+    margin-left: 22%;
+}
+#happyCustomerDetails{
+    position: absolute;
+    width: 100vw;
+    height: 600px;
+    top: 225%;
+    left: 0;
+    right: 0;
+
+
+
+}
+.happyImg{
+    margin-left: 7%;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
