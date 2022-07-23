@@ -11,10 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cfde314d-011d-4dab-99fb-525e0e8a1e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/assets/style/servicesFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/assets/style/servicesFormStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,38 +70,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/assets/images/icons",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "1f73e13d757c981e460df4fc7c30553c"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/assets/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1f73e13d757c981e460df4fc7c30553c&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Front_End/assets/images" />
+      <recent name="$PROJECT_DIR$/Front_End/assets" />
       <recent name="$PROJECT_DIR$/Front_End/assets/images/icons" />
       <recent name="$PROJECT_DIR$/Back_End/src/main/resources" />
       <recent name="$PROJECT_DIR$/Back_End/src/main/java" />
-      <recent name="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/entity" />
-      <recent name="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Front_End/assets/images/cars" />
@@ -220,7 +218,9 @@
       <workItem from="1658426609642" duration="1574000" />
       <workItem from="1658428215513" duration="48000" />
       <workItem from="1658463140404" duration="6064000" />
-      <workItem from="1658504598005" duration="16899000" />
+      <workItem from="1658504598005" duration="18189000" />
+      <workItem from="1658547164466" duration="4642000" />
+      <workItem from="1658560260742" duration="6599000" />
     </task>
     <servers />
   </component>

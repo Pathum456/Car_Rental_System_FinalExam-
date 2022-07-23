@@ -66,6 +66,19 @@
         }#divIcon4 {
             background: url("assets/images/icons/florida.png");
             background-size: 100% 100%;
+        }#driverIcon {
+            background: url("assets/images/driver1.jpeg");
+            background-size: 100% 100%;
+        }#driverIcon2 {
+            background: url("assets/images/driver2.jpeg");
+            background-size: 100% 100%;
+        }
+        #driverNeedImg1{
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 82%;
+            background-size: 100% 100%;
         }
     </style>
 </head>
@@ -356,7 +369,7 @@
                     </ul>
                 </td>
                 <td>
-                    <ul>
+                    <ul >
                         <li class="list-group-item"><b>$55/day</b></li>
                     </ul>
                 </td>
@@ -510,7 +523,13 @@
 <!--Services Form Start-->
 <section class="container-fluid" id="serviceContent">
     <div id="serviceThumbnail" >
-        <h1 id="serviceTittle">Services</h1>
+        <h1 id="serviceTittle">Our Services</h1>
+    </div>
+    <div class="row justify-content-center" id="serviceInfoTitle">
+        <div class="col">
+            <h3 class="text-primary "id="services2">SERVICES</h3>
+            <h1><strong>Our Latest Services</strong></h1>
+        </div>
     </div>
     <div class="row" id="serviceInfoDiv">
         <div class="col-md-3">
@@ -532,8 +551,6 @@
                 <div class="text w-100">
                     <h3 class="heading mb-2">City Transfer</h3>
                     <p class="lh-lg">According to our data, Easy Car-Rental is the cheapest rental car agency in Sri Lanka. Users who book a rental car with Easy Car-Rental often find prices below the $43 average daily rate each day. Depending on the city you visit, what type of car you’re interested in, and the length of your rental, you could find prices for as low as $28 each day when booking with Easy Car-Rental.
-
-
                     </p>
                 </div>
             </div>
@@ -551,7 +568,10 @@
         </div>
         <div class="col-md-3">
             <div class="services services-2 w-100 text-center">
-                <div class="icon d-flex align-items-center justify-content-center"><div id="divIcon4" class="divIcon"></div>
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div id="divIcon4" class="divIcon">
+
+                    </div>
                 </div>
                 <div class="text w-100">
                     <h3 class="heading mb-2">Whole City Tour</h3>
@@ -559,6 +579,55 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col driverNeedDiv">
+        <div class="driverNeedDiv1 row">
+        </div>
+        <div class="driverNeedDivImg row" >
+            <img id="driverNeedImg1" src="assets/images/needDriver.png" alt="">
+            <button type="button" class="driverNeedBtn btn justify-content-center row">Become A Driver</button>
+        </div>
+        <div class="row" id="driverInfoDiv">
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <div id="driverIcon" class="driverIcon">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="driverInfoText">
+            <div class="text w-100">
+            <h2 class="heading mb-2" id="driverName">Simon Deadru</h2>
+
+            <ul class=" list-group-flush">
+                <li class="list-group-item"><b>5 Years Experience</b></li>
+            </ul>
+        </div></div>
+
+        <div class="row" id="driverInfoDiv2">
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <div id="driverIcon2" class="driverIcon">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="driverInfoText2">
+            <div class="text w-100">
+                <h2 class="heading mb-2" id="driverName2">Jean Alesi</h2>
+
+                <ul class=" list-group-flush">
+                    <li class="list-group-item"><b>3 Years Experience</b></li>
+                </ul>
+            </div></div>
     </div>
 </section>
 <!--Services Form End-->
