@@ -1,0 +1,14 @@
+/**
+    * @author _ Pathum_Kaleesha 2022-07-23 - 23.10 
+    * @since - v0.1.0
+**/
+#sidebar{
+    background: black !important;
+    min-width: 100px;
+    width: 17vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:55px;
+    transition: all 0.4s;
+}
