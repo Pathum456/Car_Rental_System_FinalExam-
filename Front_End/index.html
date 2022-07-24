@@ -546,7 +546,7 @@
 <!--Services Form Start-->
 <section class="container-fluid" id="serviceContent">
     <div class="serviceThumbnail">
-        <h1 class="serviceTittle">Our Services</h1>
+        <h1 class="serviceTittle ">Our Services</h1>
     </div>
     <div class="row justify-content-center" id="serviceInfoTitle">
         <div class="col">
@@ -784,27 +784,29 @@
 <!-- ========================= -->
 
 <!--Admin Dash Board Form Content Start-->
-<!--<section class="container-fluid" id="adminDash">
-    <nav id="sidebar">
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a id="linkCarDetail" class="nav-link text-white" ><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkDriver" class="nav-link text-white"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkCustomer" class="nav-link text-white"><i class="fas fa-user-cog"></i>  Manage Customer</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkPayment" class="nav-link text-white"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkMaintenance" class="nav-link text-white"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
-            </li>
-        </ul>
-    </nav>
-</section>-->
+<section class="container-fluid" id="adminDash">
+    <div id="adminImage">
+        <nav id="sidebar">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a id="linkCarManage" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
+                </li>
+                <li class="nav-item nav-itemMg">
+                    <a id="linkDriver" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
+                </li>
+                <li class="nav-item nav-itemMg">
+                    <a id="linkCustomer" class="nav-link text-black-50" href="#"><i class="fas fa-user-cog"></i>  Manage Customer</a>
+                </li>
+                <li class="nav-item nav-itemMg">
+                    <a id="linkPayment" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
+                </li>
+                <li class="nav-item nav-itemMg">
+                    <a id="linkMaintenance" class="nav-link text-black-50 " href="#"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
 <!--Admin Dash Board Form Content End-->
 
 <!-- ========================= -->
@@ -817,9 +819,11 @@
     $("#signUp").css("display", "none");
     $("#serviceContent").css("display", "none");
     $("#aboutContent").css("display", "none");
+    $("#adminDash").css("display", "none");
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
+
     $("#linkCar").click(function () {
         /*$("#loginForm").css("display", "block");*/
         $("#dashBoardContent").css("display", "none");
@@ -827,31 +831,38 @@
         $("#loginForm").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "none");
     });
+
     $("#rentCarBtnDashBoard").click(function () {
         $("#loginForm").css("display", "block");
+        $("#adminDash").css("display", "none");
     });
+
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#carContent").css("display", "none");
         $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#loginForm").css("display", "block");
+        $("#adminDash").css("display", "none");
 
     });
     $("#loginCloseBtn").click(function () {
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#loginForm").css("display", "none");
+
     });
     $("#linkRegistration").click(function () {
         $("#signUp").css("display", "block");
         $("#navbar").css("display", "none");
         $("#rentCarBtnDashBoard").css("display", "none");
-
+        $("#adminDash").css("display", "none");
     });
     $("#loginCheckBtn").click(function () {
         /*  if ($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user123") {
@@ -859,14 +870,14 @@
               $("#carContent").css("display", "block");
               $("#loginForm").css("display", "none");
           }*/
-        /* if ($("#typeEmailX").val()==="admin@gmail.com" && $("#typePasswordX").val()==="admin123") {
+         if ($("#typeEmailX").val()==="admin@gmail.com" && $("#typePasswordX").val()==="admin123") {
              $("#dashBoardContent").css("display", "none");
              $("#carContent").css("display", "none");
              $("#loginForm").css("display", "none");
              $("#aboutContent").css("display", "none");
              $("#serviceContent").css("display", "none");
              $("#adminDash").css("display", "block");
-         }*/
+         }
     });
     $("#signCloseBtn").click(function () {
         $("#signUp").css("display", "none");
@@ -892,12 +903,14 @@
         $("#loginForm").css("display", "none");
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#signUp").css("display", "block");
+        $("#adminDash").css("display", "none");
     });
     $("#linkServices").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#carContent").css("display", "none");
         $("#serviceContent").css("display", "block");
         $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "none");
 
     });
     $("#linkAbout").click(function () {
@@ -905,6 +918,7 @@
         $("#carContent").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#aboutContent").css("display", "block");
+        $("#adminDash").css("display", "none");
 
     });
 

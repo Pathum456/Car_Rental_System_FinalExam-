@@ -3,12 +3,17 @@
     * @since - v0.1.0
 **/
 #sidebar{
-    background: black !important;
+    background: #0dcaf0 !important;
     min-width: 100px;
-    width: 17vw;
+    width: 20vw;
     height: 100vh;
     position: fixed;
     left: 0;
-    top:55px;
+    top:11%;
     transition: all 0.4s;
+}
+.nav-item:hover {
+    background: white;
+}.nav-itemMg{
+    margin-top: 5%;
 }
