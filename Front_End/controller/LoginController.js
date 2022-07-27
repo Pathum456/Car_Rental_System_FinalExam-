@@ -34,12 +34,6 @@ function searchAdmin(userType, username, password) {
                 if (res.data === true) {
                     location.replace("AdminDashBoard.html");
                 } else {
-                    /*swal.fire({
-                        icon: 'warning',
-                        title: 'Oops...',
-                        text: 'User Name or Password Not matching!' + '\n' +
-                            ' Please use the Create New Button to create a new account',
-                    })*/
                     alert(res.massage);
                 }
             }
@@ -56,12 +50,7 @@ function searchDriver(userType, username, password) {
                 if (res.data === true) {
                     location.replace("DriverPage.html");
                 } else {
-                    /*swal.fire({
-                        icon: 'warning',
-                        title: 'Oops...',
-                        text: 'User Name or Password Not matching!' + '\n' +
-                            ' Please use the Register Button to create a new account',
-                    })*/
+
                     alert(res.massage);
                 }
             }
@@ -82,12 +71,7 @@ function searchCustomer(userType, username, password) {
                     logincar();
                     alert(res.massage);
                 } else {
-                    /*swal.fire({
-                        icon: 'warning',
-                        title: 'Oops...',
-                        text: 'User Name or Password Not matching!' + '\n' +
-                            ' Please use the Create New Button to create a new account',
-                    })*/
+
                     alert(res.massage);
                 }
             }
@@ -96,7 +80,6 @@ function searchCustomer(userType, username, password) {
 }
 
 $('#loginCheckBtn').click(function () {
-
     if ($('#userName').val() !== "" && $('#password').val() !== "") {
         loginUser();
     }
@@ -108,5 +91,4 @@ function logincar() {
     $("#serviceContent").css("display", "none");
     $("#aboutContent").css("display", "none");
     $("#adminDash").css("display", "none");
-
 }

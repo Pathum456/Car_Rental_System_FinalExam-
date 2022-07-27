@@ -1581,7 +1581,11 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="controller/LoginController.js"></script>
 <script src="controller/AdminController.js"></script>
+<script src="controller/RegistrationController.js"></script>
 <script>
+
+
+
     var navbar = document.getElementById("navSection");
     var sticky = navbar.offsetTop;
 
@@ -1677,20 +1681,8 @@
         $("#rentCarBtnDashBoard").css("display", "block");
 
     });
-    $("#registerBtn").click(function () {
-        /* if (!$("#cusID").val()===("") && !$("#cusName").val()==="" && !$("#cusAddress").val()==="" && !$("#cusContact").val() && !$("#cusEmail").val() && !$("#cusNic").val() && !$("#imgNiCFront").val() && !$("#imgNiCBack").val() && !$("#cusLicence").val() && !$("#imgLicence").val() && !$("#cusUserName").val() && !$("#password").val()) {
-             alert(
-                 "Please fill all Field in Registration Form"
-             );
-         } else {
-             alert("registered")
-         }*/
-        addAdmin();
-        /*$("#navbar").css("display", "block");
-        $("#signUp").css("display", "none");
-        $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block")*/
-    });
+
+
     $("#newUser").click(function () {
         $("#navbar").css("display", "none");
         $("#loginForm").css("display", "none");
@@ -1734,6 +1726,12 @@
         $("#manageDriver").css("display", "none");
     });
 
+
+    $("#registerBtn").click(function () {
+        clearSignupTextFields();
+        //addAdmin();
+        // $("#cusName").css("border-color","red");
+    });
 
 </script>
 </body>

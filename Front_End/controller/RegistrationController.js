@@ -2,6 +2,60 @@
  * @author _ Pathum_Kaleesha
  * @since - v0.1.0
  **/
+
+
+
+
+/*    function validateCustomer(){
+        $("#cusName").bind("keypress", function (event) {
+            /!*if (event.charCode=13) {
+                var regex = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+
+                    $("#cusName").css("border-color","red");
+                    event.preventDefault();
+                    return false;
+
+                }
+            }*!/
+        });
+        var regName = new RegExp("^[a-zA-Z]+ [a-zA-Z]+$");
+        var name = $("#cusName").value;
+        if(!regName.test(name)){
+            $("#cusName").css("border-color","red");
+            document.getElementById('name').focus();
+            return false;
+        }else{
+            $("#cusName").style.border='green';
+            $("#cusAddress").focus();
+            return true;
+        }
+
+    }*/
+
+/*function validateCustomer() {
+
+
+    $("#customerForm").validate({
+        rules: {
+            id: {
+                required: true, minLength: 3,
+                message: 'ID Not Auto Filled'
+            },
+            name: {
+                required: true,
+                minLength: 3,
+                message: 'ID Not Auto Filled'
+            },
+            address: {
+                required: true,
+                minLength: 3
+            }
+        }
+    });
+}*/
+
 var baseUrl3 = "http://localhost:8080/Back_End_war/api/v1/customer";
 var cusID=$('#cusID').val();
 var cusName=$('#cusName').val();
@@ -40,28 +94,26 @@ function save(userType, username, password) {
         contentType: "application/json",
         data: JSON.stringify(cusotmer),
         success: function (resp) {
-            if (resp.data() === true){
+            if (resp.data() === true) {
                 clearSignupTextFields();
             }
-            /*swal({
-                title: "Confirmation",
-                text: "Admin Added Successfully",
-                icon: "success",
-                button: "Close",
-                timer: 2000
-            });*/
             alert(resp.massage);
         },
         error: function (ob) {
-            /*swal({
-                title: "Error!",
-                text: "Admin Not Added Successfully",
-                icon: "error",
-                button: "Close",
-                timer: 2000
-            });*/
+
             alert(ob.massage);
         }
     });
+
+}
+function clearSignupTextFields(){
+    $("#cusName").val('');
+    $("#cusAddress").val('');
+    $("#cusContact").val('');
+    $("#cusNic").val('');
+    $("#cusUserName").val('');
+    $("#password").val('');
+    $("#cusEmail").val('');
+    $("#imgNiCFront").val('');
 
 }
