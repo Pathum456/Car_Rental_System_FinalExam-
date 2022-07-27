@@ -33,7 +33,7 @@ public class CustomerController {
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil saveCustomer(CustomerDTO dto) {
         service.saveCustomer(dto);
-        return new ResponseUtil(200, "Saved", null);
+        return new ResponseUtil(200, "Saved", true);
     }
 
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -57,12 +57,12 @@ public class CustomerController {
     public ResponseUtil searchCustomerByUsernameAndPassword(@PathVariable String username, @PathVariable String password) {
         if (service.findCustomerByUsername(username)) {
             if (service.findCustomerByPassword(password)) {
-                return new ResponseUtil(200, "Login Successful", null);
+                return new ResponseUtil(200, "Login Successful", true);
             } else {
-                return new ResponseUtil(404, "Incorrect Password", null);
+                return new ResponseUtil(404, "Incorrect Password", false);
             }
         } else {
-            return new ResponseUtil(404, "Incorrect Username", null);
+            return new ResponseUtil(404, "Incorrect Username", false);
         }
     }
 

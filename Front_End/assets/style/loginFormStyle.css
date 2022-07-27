@@ -2,6 +2,9 @@
     * @author _ Pathum_Kaleesha
     * @since - v0.1.0
 **/
+.mb-4 {
+    margin-bottom: 0 !important;
+}
 #loginForm{
     width: 28vw;
     height: 510px;
@@ -24,4 +27,9 @@ border-radius: 1rem;
 }
 .card{
     background:transparent;
+}
+
+#userType{
+    width: 42%;
+    height: 10%;
 }

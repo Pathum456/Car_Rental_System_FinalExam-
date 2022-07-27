@@ -13,6 +13,24 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js" type="text/javascript"></script>
+
+
+
+
+
     <link href="assets/style/style.css" rel="stylesheet">
     <link href="assets/style/dashBoardContentStyle.css" rel="stylesheet">
     <link href="assets/style/carContentStyle.css" rel="stylesheet">
@@ -28,7 +46,6 @@
         }
 
         body {
-
             background-size: 100%;
         }
 
@@ -421,13 +438,25 @@
                     <p class="text-white-50 mb-3">Please enter your email and password!</p>
                     <form id="LoginFormDetails">
                         <div class="form-outline form-white mb-4">
-                            <input class="form-control form-control-lg" id="typeEmailX" type="email"/>
-                            <label class="form-label" for="typeEmailX">Email</label>
+                            <input class="form-control form-control-lg" id="userEmail" type="email"/>
+                            <label class="form-label" for="userEmail">Email</label>
                         </div>
                         <div class="form-outline form-white mb-4">
-                            <input class="form-control form-control-lg" id="typePasswordX" type="password"/>
-                            <label class="form-label" for="typePasswordX">Password</label>
+                            <input class="form-control form-control-lg" id="userPassword" type="password"/>
+                            <label class="form-label" for="userPassword">Password</label>
                         </div>
+
+                        <div class="form-outline form-white mb-4">
+                            <select id="userType">
+                                <option value="Customer">Customer</option>
+                                <option value="Driver">Driver</option>
+                                <option value="Admin">Admin</option>
+
+                            </select>
+
+                        </div>
+                        <label for="userType">User Type :</label>
+
                     </form>
                     <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
@@ -748,12 +777,12 @@
         </div>
         <div class="col a1">
         </div>
-        <div class="col a1 " >
+        <div class="col a1 ">
         </div>
-        <div class="col a1 " >
+        <div class="col a1 ">
         </div>
         <div class="row " id="aboutEnd2">
-            <div class="aDetails col" >
+            <div class="aDetails col">
                 <p><Strong class="setAD"><b>05</b></Strong></p>
                 <p class="setAD2"> Years
                     Experienced</p>
@@ -789,19 +818,24 @@
         <nav id="sidebar">
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a id="linkCarManage" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
+                    <a class="nav-link text-black-50" href="#" id="linkCarManage"><i
+                            class="fas fa-solid fa-car-side"></i> Manage Car</a>
                 </li>
                 <li class="nav-item nav-itemMg">
-                    <a id="linkDriver" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
+                    <a class="nav-link text-black-50" href="#" id="linkDriver"><i class="fas fa-solid fa-users"></i>
+                        Manage Driver</a>
                 </li>
                 <li class="nav-item nav-itemMg">
-                    <a id="linkCustomer" class="nav-link text-black-50" href="#"><i class="fas fa-user-cog"></i>  Manage Customer</a>
+                    <a class="nav-link text-black-50" href="#" id="linkCustomer"><i class="fas fa-user-cog"></i> Manage
+                        Customer</a>
                 </li>
                 <li class="nav-item nav-itemMg">
-                    <a id="linkPayment" class="nav-link text-black-50" href="#"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
+                    <a class="nav-link text-black-50" href="#" id="linkPayment"><i
+                            class="fas fa-solid fa-credit-card"></i> Manage Payment</a>
                 </li>
                 <li class="nav-item nav-itemMg">
-                    <a id="linkMaintenance" class="nav-link text-black-50 " href="#"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
+                    <a class="nav-link text-black-50 " href="#" id="linkMaintenance"><i
+                            class="fas fa-solid fa-screwdriver"></i> Manage Maintenance</a>
                 </li>
             </ul>
         </nav>
@@ -810,9 +844,760 @@
 <!--Admin Dash Board Form Content End-->
 
 <!-- ========================= -->
+
+<!--Mannege Car Table Start-->
+<section class="container-fluid" id="ManageTableCar">
+    <div id="manageCarTableContent">
+        <div class="col">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-white text-black">
+                <tr>
+                    <th>Register No</th>
+                    <th>Brand</th>
+                    <th>Type</th>
+                    <th>No of passengers</th>
+                    <th>Transmission Type</th>
+                    <th>Fuel tYpe</th>
+                    <th>Daily Rate</th>
+                    <th>Monthly Rate</th>
+                    <th>Free mileage Price</th>
+                    <th>Free mileage Duration</th>
+                    <th>loss Damage waiver</th>
+                    <th>Price for Extra KM</th>
+                    <th>Complete KM</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomerJson1">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row-cols-2">
+        <button class="btn btn-warning" href="#" id="manageCarDetails" type="button">Manage Car Details >></button>
+    </div>
+</section>
+<!--Mannege Car Table End-->
+
+<!-- ========================= -->
+
+<!--Manage Car content Start-->
+<section class="container-fluid" id="manageCar">
+    <div id="manageCarContent">
+        <section class="container-fluid  bg-black text-white">
+            <h1 class="fw-bold">Manage Car</h1>
+        </section>
+        <section class="container-fluid mt-3">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <form id="carForm">
+                        <section id="sec1Car">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carRegisterId">Register ID</label>
+                                <input class="form-control" id="carRegisterId" name="id" placeholder="Register ID"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carBrand">Car Band(ex:Toyota,Suzuki) </label>
+                                <input class="form-control" id="carBrand" name="brand" placeholder="Car Brand"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carType">Car Type(ex: mini,luxury)</label>
+                                <input class="form-control" id="carType" name="type" placeholder="Car Type"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carPassengers">No Of Passengers</label>
+                                <input class="form-control" id="carPassengers" name="passengers"
+                                       placeholder="No of Passengers"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carTransmissionType">Transmission
+                                    Type(Auto,Manual)</label>
+                                <input class="form-control" id="carTransmissionType" name="transmission"
+                                       placeholder="Transmission Type"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="fuelType">Fuel Type(Diesel,Petrol)</label>
+                                <input class="form-control" id="fuelType" name="fuel" placeholder="Fuel Type"
+                                       type="text">
+                            </div>
+                            <div class="row-cols-2">
+                                <button class="btn btn-warning" href="#" id="LinkBackToTable" type="button"><< back
+                                </button>
+                            </div>
+                        </section>
+                        <section id="sec2Car">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="carColor">Color</label>
+                                <input class="form-control" id="carColor" name="Color" placeholder="Color"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="dailyRate">Daily rate</label>
+                                <input class="form-control" id="dailyRate" name="dailyRate" placeholder="Daily Rate"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="monthlyRate">Monthly Rate</label>
+                                <input class="form-control" id="monthlyRate" name="monthlyRate"
+                                       placeholder="Monthly Rate"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="mileagePrice">Free Mileage Price</label>
+                                <input class="form-control" id="mileagePrice" name="mileagePrice"
+                                       placeholder="Free Mileage Price"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="mileageDuration">Free Mileage Duration</label>
+                                <input class="form-control" id="mileageDuration" name="mileageDuration"
+                                       placeholder="Free Mileage Duration"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="priceOfExtraKM">Price Of Extra KM</label>
+                                <input class="form-control" id="priceOfExtraKM" name="priceOfExtraKM"
+                                       placeholder="Price Of Extra KM"
+                                       type="text">
+                            </div>
+                        </section>
+                        <section id="sec3Car">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="lossDamageWaiver">loss Damage Waiver</label>
+                                <input class="form-control" id="lossDamageWaiver" name="lossDamageWaiver"
+                                       placeholder="loss Damage Waiver"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="completeKm">Complete Km</label>
+                                <input class="form-control" id="completeKm" name="completeKm" placeholder="Complete Km"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="frontViewIm">Front View Image</label>
+                                <input class="form-control" id="frontViewIm" name="frontViewIm" type="file">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="backViewIm">Back View Image</label>
+                                <input class="form-control" id="backViewIm" name="backViewIm" type="file">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="sideViewIm">Side View Image</label>
+                                <input class="form-control" id="sideViewIm" name="sideViewIm" type="file">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="internalViewIm">Internal View Image</label>
+                                <input class="form-control" id="internalViewIm" name="internalViewIm" type="file">
+                            </div>
+
+                            <div class="row-cols-4">
+                                <button class="btn btn-success" id="addCar" type="button">Save</button>
+                                <button class="btn btn-primary" id="updateCar" type="button">Update</button>
+                                <button class="btn btn-danger" id="deleteCar" type="button">Delete</button>
+                            </div>
+                        </section>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+<!--Manage Car content End-->
+
+<!-- ========================= -->
+
+<!--Manage User Content Start-->
+<section class="container-fluid" id="manageUser">
+    <section class="container-fluid  bg-black text-white">
+        <h1 class="fw-bold">Manage User</h1>
+    </section>
+    <div id="manageUserTable">
+        <div class="col-5">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-white text-black">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact NO</th>
+                    <th>email</th>
+                    <th>NIC No</th>
+                    <th>NIC Front Image</th>
+                    <th>NIC Back Image</th>
+                    <th>Licence NO</th>
+                    <th>Licence Image</th>
+                    <th>UserName</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblUserJson">
+                <tr>
+                    <td>C001</td>
+                    <td>Chandana</td>
+                    <td>Matara</td>
+                    <td>0719543011</td>
+                    <td>chandana@gmail.com</td>
+                    <td>97857362V</td>
+                    <td></td>
+                    <td></td>
+                    <td>65788890</td>
+                    <td></td>
+                    <td>saman</td>
+                    <td>saman1234</td>
+                    <td>pending</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--Manage User Content End-->
+
+<!-- ========================= -->
+
+<!--Manage Driver Content Start-->
+<section class="container-fluid" id="manageDriver">
+    <div id="manageDriverContent">
+        <section class="container-fluid  bg-black text-white">
+            <h1 class="fw-bold">Manage Driver</h1>
+        </section>
+        <section class="container-fluid mt-3">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <form id="driverForm">
+                        <section id="sec1Driver">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="driverLicenceNo">Licence NO</label>
+                                <input class="form-control" id="driverLicenceNo" name="id" placeholder="Register ID"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="name">Name </label>
+                                <input class="form-control" id="name" name="name" placeholder="Name"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="address">Address</label>
+                                <input class="form-control" id="address" name="address" placeholder="Address"
+                                       type="text">
+                            </div>
+                        </section>
+                        <section id="sec2Driver">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="contactNo">Contact Number</label>
+                                <input class="form-control" id="contactNo" name="contactNo" placeholder="Contact No"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="nicNo">NIC NO</label>
+                                <input class="form-control" id="nicNo" name="nicNo" placeholder="NIC NO"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="driverUserName">User Name</label>
+                                <input class="form-control" id="driverUserName" name="driverUserName"
+                                       placeholder="User Name"
+                                       type="text">
+                            </div>
+                        </section>
+                        <section id="sec3Driver">
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="driverPassword">Password</label>
+                                <input class="form-control" id="driverPassword" name="driverPassword"
+                                       placeholder="Driver Password"
+                                       type="text">
+                            </div>
+                            <div class="mb-sm-0">
+                                <label class="form-label" for="availability">Availability</label>
+                                <input class="form-control" id="availability" name="availability"
+                                       placeholder="Availability"
+                                       type="text">
+                            </div>
+                            <div class="row-cols-4">
+                                <button class="btn btn-success" id="addDriver" type="button">Save</button>
+                                <button class="btn btn-primary" id="updateDriver" type="button">Update</button>
+                                <button class="btn btn-danger" id="deleteDriver" type="button">Delete</button>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+                <div id="manageDriverTable">
+                    <div class="col-5">
+                        <table class="table table-bordered table-hover">
+                            <thead class="bg-white text-black">
+                            <tr>
+                                <th>Licence NO</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Contact NO</th>
+                                <th>email</th>
+                                <th>NIC No</th>
+                                <th>UserName</th>
+                                <th>Password</th>
+                                <th>Availability</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblDriverJson">
+                            <tr>
+                                <td>C001</td>
+                                <td>Chandana</td>
+                                <td>Matara</td>
+                                <td>0719543011</td>
+                                <td>chandana@gmail.com</td>
+                                <td>97857362V</td>
+                                <td>saman</td>
+                                <td>saman1234</td>
+                                <td>true</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!--Manage Driver Content End-->
+
+<!--Booking Request Form Start-->
+<section class="container-fluid" id="bookingRequest">
+    <header class="d-flex justify-content-center " id="header">
+        <section class="container-fluid  align-items-center" id="navSection" style=" z-index: 999;padding: 0">
+
+            <nav class="navbar navbar-expand-lg navbar-dark d-flex ">
+                <div class="container-fluid  row">
+
+                    <div class="collapse navbar-collapse  col-md-6"
+                         id="navbarNavDropdown">
+                        <ul class="nav  ">
+                            <li class="nav-item "><a aria-current="page" class="nav-link " href="index.html"><i class="fas fa-home fa-1x"
+                                                                                                                id="home"
+                                                                                                                style="position: absolute"></i></a>
+                            </li>
+                            <li class="nav-item"><a
+                                    style="font-family: 'Dancing Script SemiBold',serif;text-decoration: none;color: white;
+                                font-weight: 600;">Customer</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </section>
+    </header>
+
+    <div class="row">
+        <div class="col-2" id="leftDash">
+            <div aria-orientation="vertical" class="nav flex-column nav-tabs text-center overflow-hidden" id="v-tabs-tab"
+                 role="tablist" style="height: 86vh">
+                <a aria-controls="v-tabs-bookingRequest" aria-selected="true" class="nav-link active"
+                   data-mdb-toggle="tab" href="#v-tabs-bookingRequest"
+                   id="v-tabs-bookingRequest-tab" role="tab" style="font-size: 15px; padding: 25px;">
+                    <i class="fas fa-archive"></i> Booking Request</a>
+                <a aria-controls="v-tabs-bookingResponses" aria-selected="false" class="nav-link"
+                   data-mdb-toggle="tab" href="#v-tabs-bookingResponses"
+                   id="v-tabs-bookingResponses-tab" role="tab"
+                   style="font-size: 15px; padding: 25px;">
+                    <i class="fas fa-list"></i> Booking Responses</a>
+                <a aria-controls="v-tabs-payment" aria-selected="false" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-payment"
+                   id="v-tabs-payment-tab" role="tab" style="font-size: 15px; padding: 25px;">
+                    <i class="fas fa-money-bill-wave"></i> Payments</a>
+
+            </div>
+        </div>
+        <div class="col-10 p-3">
+            <div class="container-fluid">
+                <div class="tab-content" id="v-tabs-tabContent">
+                    <div aria-labelledby="v-tabs-bookingRequest-tab" class="tab-pane fade show active" id="v-tabs-bookingRequest"
+                         role="tabpanel">
+                        <div class="row text-center"><h1 class="h1 display-5">Booking Request</h1></div>
+                        <hr>
+                        <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+                            <div class="input-group d-flex align-items-lg-end justify-content-end">
+                                <div class="col-2">
+                                    <label for="txtCustId"></label> <input class="form-control" disabled id="txtCustId" name="customerId" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <h3 class="h3  p-2 bg-black text-white">Car and Driver Details</h3>
+                            <div class="col-2">
+                                <label class="form-label mb-0" for="cmbType">Car Type</label>
+                                <select aria-label="Default select example" class="form-select" id="cmbType"
+                                        name="type">
+                                    <option selected>- Select Car Type -</option>
+                                    <option value="1">General</option>
+                                    <option value="2">Premium</option>
+                                    <option value="3">Luxury</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-label mb-0" for="cmbRegistrationNo">Car Registration No</label>
+                                <select aria-label="Default select example" class="form-select" id="cmbRegistrationNo"
+                                        name="type">
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarBrand">Brand</label>
+                                    <input class="form-control" disabled id="txtCarBrand" name="carBrand" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarColor">Color</label>
+                                    <input class="form-control" disabled id="txtCarColor" name="carColor" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarFuel">Fuel Type</label>
+                                    <input class="form-control" disabled id="txtCarFuel" name="carFuel" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarTransmission">Transmission</label>
+                                    <input class="form-control" disabled id="txtCarTransmission"
+                                           name="carTransmission" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ms-0 me-0">
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarNoOfPassengers">No Of Passengers</label>
+                                    <input class="form-control" disabled id="txtCarNoOfPassengers"
+                                           name="carNoOfPassengers" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarDailyRate">Daily Rate (Rs.)</label>
+                                    <input class="form-control" disabled id="txtCarDailyRate" name="carDailyRate"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarMonthlyRate">Monthly Rate (Rs.)</label>
+                                    <input class="form-control" disabled id="txtCarMonthlyRate" name="carMonthlyRate"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarFreeKmForPrice">Free Km For Price
+                                        (Km)</label>
+                                    <input class="form-control" disabled id="txtCarFreeKmForPrice"
+                                           name="carFreeKmForPrice" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarFreeKmForDuration">Free Km For Duration
+                                        (Km)</label>
+                                    <input class="form-control" disabled id="txtCarFreeKmForDuration"
+                                           name="carFreeKmForDuration" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarLossDamageWavier">Loss Damage Wavier
+                                        (Rs.)</label>
+                                    <input class="form-control" disabled id="txtCarLossDamageWavier"
+                                           name="carLossDamageWavier" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ms-0 me-0">
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarPriceForExtraKm">Price For Extra Km
+                                        (Rs.)</label>
+                                    <input class="form-control" disabled id="txtCarPriceForExtraKm"
+                                           name="carPriceForExtraKm" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarCompleteKm">Complete Km</label>
+                                    <input class="form-control" disabled id="txtCarCompleteKm" name="carCompleteKm"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-label mb-0">Car Front View</label>
+                                <div class="mb-3" id="divCarFrontView" style="height: 13vh; border: #00e5ff 2px solid">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-label mb-0">Car Back View</label>
+                                <div class="mb-3" id="divCarBackView" style="height: 13vh; border: #00e5ff 2px solid">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-label mb-0">Car Side View</label>
+                                <div class="mb-3" id="divCarSideView" style="height: 13vh; border: #00e5ff 2px solid">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label class="form-label mb-0">Car Interior View</label>
+                                <div class="mb-3" id="divCarInteriorView"
+                                     style="height: 13vh; border: #00e5ff 2px solid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <h3 class="h3  p-2 bg-black text-white">Rental Details</h3>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarRentId">Rent ID</label>
+                                    <input class="form-control" disabled id="txtCarRentId" name="carRentId" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarTodayDate">Today</label>
+                                    <input class="form-control" disabled id="txtCarTodayDate" name="carTodayDate"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarPickupDate">Pickup Date</label>
+                                    <input class="form-control" id="txtCarPickupDate" name="carPickupDate" type="date">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtCarReturnDate">Return Date</label>
+                                    <input class="form-control" id="txtCarReturnDate" name="carReturnDate" type="date">
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <label class="form-check-label pr-5" for="needDriver">Need a driver? </label>
+                                <input class="form-check-input" id="needDriver" type="checkbox" value="yes">
+                            </div>
+                        </div>
+                        <div class="row ms-0 me-0">
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDriverLicenceNo">Driver Licence No</label>
+                                    <input class="form-control" disabled id="txtDriverLicenceNo"
+                                           name="driverLicenceNo" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDriverName">Driver Name</label>
+                                    <input class="form-control" disabled id="txtDriverName" name="driverName"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDriverAddress">Driver Address</label>
+                                    <input class="form-control" disabled id="txtDriverAddress" name="driverAddress"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDriverContactNo">Driver Contact No</label>
+                                    <input class="form-control" disabled id="txtDriverContactNo"
+                                           name="driverContactNo" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDriverNIC">Driver NIC</label>
+                                    <input class="form-control" disabled id="txtDriverNIC" name="driverNIC" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ms-0 me-0">
+                            <h3 class="h3  p-2 bg-black text-white">Payment Details</h3>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtPaymentId">Payment ID</label>
+                                    <input class="form-control" disabled id="txtPaymentId" name="paymentId" type="text">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtPaymentAmount">Amount (Rs.)</label>
+                                    <input class="form-control" id="txtPaymentAmount" name="paymentAmount" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row m-3">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-primary mt-3 " id="sendRequest" type="button">Send Request
+                                </button>
+                                <button class="btn btn-warning mt-3 " id="btnCancleRental" type="button">Cancle</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div aria-labelledby="v-tabs-bookingResponses-tab" class="tab-pane fade" id="v-tabs-bookingResponses"
+                         role="tabpanel">
+                        <div class="row text-center"><h1 class="h1 display-5">Booking Responses</h1></div>
+                        <div class="row overflow-scroll" style="height: 25vh">
+                            <table class="table table-hover table-bordered table-striped" id="bookingResponsesTbl">
+                                <thead class="bg-dark" style="color: white">
+                                <tr>
+                                    <th>Rent ID</th>
+                                    <th>Date</th>
+                                    <th>Pickup Date</th>
+                                    <th>Return Date</th>
+                                    <th>Registration No</th>
+                                    <th>Customer ID</th>
+                                    <th>Licence No</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="bookingResponsesTable">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <hr>
+                        <div class="row ms-0 me-0">
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtRentId">Rent ID</label>
+                                    <input class="form-control" disabled id="txtRentId" name="rentId" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtDate">Date</label>
+                                    <input class="form-control" disabled id="txtDate" name="date" type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtPickupDate">Pickup Date</label>
+                                    <input class="form-control" disabled id="txtPickupDate" name="pickupDate"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtReturnDate">Return Date</label>
+                                    <input class="form-control" disabled id="txtReturnDate" name="returnDate"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtRegistrationNo">Registration No</label>
+                                    <input class="form-control" disabled id="txtRegistrationNo" name="registrationNo"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label class="form-label mb-0" for="txtLicenceNo">Licence No</label>
+                                    <input class="form-control" disabled id="txtLicenceNo" name="licenceNo" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-3">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-danger mt-3 " id="btnDeleteRental" type="button"><i
+                                        class="fas fa-trash"></i> Delete Rental
+                                </button>
+                                <button class="btn mt-3" id="btnClearRental" style="background-color: #8e9090; color: white"
+                                        type="button">Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div aria-labelledby="v-tabs-payment-tab" class="tab-pane fade" id="v-tabs-payment"
+                         role="tabpanel">
+                        <div class="row text-center"><h1 class="h1 display-5">Payments</h1></div>
+                        <div class="row overflow-scroll" style="height: 75vh">
+                            <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
+                                <thead class="bg-dark" style="color: white">
+                                <tr>
+                                    <th>Payment ID</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Customer ID</th>
+                                    <th>Rent ID</th>
+                                </tr>
+                                </thead>
+                                <tbody id="paymentsTable">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--Booking Request Form End-->
+
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="controller/LoginController.js"></script>
+<script src="controller/AdminController.js"></script>
 <script>
+    var navbar = document.getElementById("navSection");
+    var sticky = navbar.offsetTop;
+
+    function scrollFunction() {
+
+        if (window.pageYOffset >= sticky) {
+            console.log(sticky + 'in');
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+            console.log(sticky);
+
+        }
+
+    }
+
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
     $("#carContent").css("display", "none");
@@ -820,9 +1605,14 @@
     $("#serviceContent").css("display", "none");
     $("#aboutContent").css("display", "none");
     $("#adminDash").css("display", "none");
+    $("#ManageTableCar").css("display", "none");
+    $("#manageCar").css("display", "none");
+    $("#manageUser").css("display", "none");
+    $("#manageDriver").css("display", "none");
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
+
 
     $("#linkCar").click(function () {
         /*$("#loginForm").css("display", "block");*/
@@ -870,14 +1660,16 @@
               $("#carContent").css("display", "block");
               $("#loginForm").css("display", "none");
           }*/
-         if ($("#typeEmailX").val()==="admin@gmail.com" && $("#typePasswordX").val()==="admin123") {
+        /* if ($("#typeEmailX").val() === "admin@gmail.com" && $("#typePasswordX").val() === "admin123") {
              $("#dashBoardContent").css("display", "none");
              $("#carContent").css("display", "none");
              $("#loginForm").css("display", "none");
              $("#aboutContent").css("display", "none");
              $("#serviceContent").css("display", "none");
              $("#adminDash").css("display", "block");
-         }
+             $("#ManageTableCar").css("display", "block");
+         }*/
+        loginUser();
     });
     $("#signCloseBtn").click(function () {
         $("#signUp").css("display", "none");
@@ -893,10 +1685,11 @@
          } else {
              alert("registered")
          }*/
-        $("#navbar").css("display", "block");
+        addAdmin();
+        /*$("#navbar").css("display", "block");
         $("#signUp").css("display", "none");
         $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block")
+        $("#carContent").css("display", "block")*/
     });
     $("#newUser").click(function () {
         $("#navbar").css("display", "none");
@@ -920,6 +1713,25 @@
         $("#aboutContent").css("display", "block");
         $("#adminDash").css("display", "none");
 
+    });
+    $("#linkDriver").click(function () {
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "block");
+    });
+    $("#linkCarManage").click(function () {
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "block");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+
+    });
+    $("#linkCustomer").click(function () {
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "block");
+        $("#manageDriver").css("display", "none");
     });
 
 

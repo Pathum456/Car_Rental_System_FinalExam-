@@ -4,7 +4,7 @@
 **/
 #welcomeTestDiv{
     position: absolute;
-    width: 100vw;
+    width: 64vw;
     height: 100vh;
     left: 38%;
     top: 101%;
@@ -23,19 +23,19 @@ border-radius: 1rem;
      width: 150px;
      height: 38px;
      top: 18%;
-     left: 18%;
+     left: 27%;
 
 
  }#titleAbout{
-     position: absolute;
-     width: 40%;
-     height: 70%;
-     top: 23%;
-     left: 18%;
+       position: absolute;
+       width: 64%;
+       height: 70%;
+       top: 25%;
+       left: 27%;
  }
 .aboutDescription{
 
-    margin-top: 5%;
+    margin-top: 2%;
 }
 #lookCarBtn{
     width: 150px;
@@ -53,7 +53,6 @@ border-radius: 1rem;
     left: 0;
     right: 0;
     margin: auto;
-
 }
 .cTitle{
     margin-left: 22%;
@@ -65,9 +64,6 @@ border-radius: 1rem;
     top: 225%;
     left: 0;
     right: 0;
-
-
-
 }
 .happyImg{
     margin-left: 7%;
@@ -81,8 +77,6 @@ border-radius: 1rem;
     top: 320%;
     width: 101%;
     height: 50%;
-
-
 }
 .a1:hover{
     background: #3695f3;
