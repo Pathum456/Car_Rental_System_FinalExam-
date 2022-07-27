@@ -82,11 +82,14 @@ var cusotmer = {
     contactNo: contact,
     email: cusEmail,
     nicNo: cusNicNo,
-
+    nicFrontImg:nicFrontImg,
+    nicBackImg:nicBackImg,
+    licenceNo:licenceNo,
+    licenceImg:licenceImg,
     username: username,
     password: password
 }
-function save(userType, username, password) {
+function saveCustomer() {
 
     $.ajax({
         url: baseUrl3,

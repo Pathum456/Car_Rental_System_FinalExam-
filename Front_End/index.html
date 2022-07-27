@@ -28,9 +28,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js" type="text/javascript"></script>
 
 
-
-
-
     <link href="assets/style/style.css" rel="stylesheet">
     <link href="assets/style/dashBoardContentStyle.css" rel="stylesheet">
     <link href="assets/style/carContentStyle.css" rel="stylesheet">
@@ -557,8 +554,12 @@
                             <div class="col-3">
                                 <button class="btn btn-success " id="registerBtn" type="button">Register</button>
                             </div>
-                        </section>
 
+
+                        </section>
+                        <div class="col-3">
+                            <button class=" btn-primary" id="changeUserType" type="button">User</button>
+                        </div>
                     </form>
                 </div>
 
@@ -1197,9 +1198,10 @@
                     <div class="collapse navbar-collapse  col-md-6"
                          id="navbarNavDropdown">
                         <ul class="nav  ">
-                            <li class="nav-item "><a aria-current="page" class="nav-link " href="index.html"><i class="fas fa-home fa-1x"
-                                                                                                                id="home"
-                                                                                                                style="position: absolute"></i></a>
+                            <li class="nav-item "><a aria-current="page" class="nav-link " href="index.html"><i
+                                    class="fas fa-home fa-1x"
+                                    id="home"
+                                    style="position: absolute"></i></a>
                             </li>
                             <li class="nav-item"><a
                                     style="font-family: 'Dancing Script SemiBold',serif;text-decoration: none;color: white;
@@ -1216,7 +1218,8 @@
 
     <div class="row">
         <div class="col-2" id="leftDash">
-            <div aria-orientation="vertical" class="nav flex-column nav-tabs text-center overflow-hidden" id="v-tabs-tab"
+            <div aria-orientation="vertical" class="nav flex-column nav-tabs text-center overflow-hidden"
+                 id="v-tabs-tab"
                  role="tablist" style="height: 86vh">
                 <a aria-controls="v-tabs-bookingRequest" aria-selected="true" class="nav-link active"
                    data-mdb-toggle="tab" href="#v-tabs-bookingRequest"
@@ -1227,7 +1230,8 @@
                    id="v-tabs-bookingResponses-tab" role="tab"
                    style="font-size: 15px; padding: 25px;">
                     <i class="fas fa-list"></i> Booking Responses</a>
-                <a aria-controls="v-tabs-payment" aria-selected="false" class="nav-link" data-mdb-toggle="tab" href="#v-tabs-payment"
+                <a aria-controls="v-tabs-payment" aria-selected="false" class="nav-link" data-mdb-toggle="tab"
+                   href="#v-tabs-payment"
                    id="v-tabs-payment-tab" role="tab" style="font-size: 15px; padding: 25px;">
                     <i class="fas fa-money-bill-wave"></i> Payments</a>
 
@@ -1236,14 +1240,16 @@
         <div class="col-10 p-3">
             <div class="container-fluid">
                 <div class="tab-content" id="v-tabs-tabContent">
-                    <div aria-labelledby="v-tabs-bookingRequest-tab" class="tab-pane fade show active" id="v-tabs-bookingRequest"
+                    <div aria-labelledby="v-tabs-bookingRequest-tab" class="tab-pane fade show active"
+                         id="v-tabs-bookingRequest"
                          role="tabpanel">
                         <div class="row text-center"><h1 class="h1 display-5">Booking Request</h1></div>
                         <hr>
                         <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
                             <div class="input-group d-flex align-items-lg-end justify-content-end">
                                 <div class="col-2">
-                                    <label for="txtCustId"></label> <input class="form-control" disabled id="txtCustId" name="customerId" type="text">
+                                    <label for="txtCustId"></label> <input class="form-control" disabled id="txtCustId"
+                                                                           name="customerId" type="text">
                                 </div>
                             </div>
                         </div>
@@ -1472,7 +1478,8 @@
                             </div>
                         </div>
                     </div>
-                    <div aria-labelledby="v-tabs-bookingResponses-tab" class="tab-pane fade" id="v-tabs-bookingResponses"
+                    <div aria-labelledby="v-tabs-bookingResponses-tab" class="tab-pane fade"
+                         id="v-tabs-bookingResponses"
                          role="tabpanel">
                         <div class="row text-center"><h1 class="h1 display-5">Booking Responses</h1></div>
                         <div class="row overflow-scroll" style="height: 25vh">
@@ -1542,7 +1549,8 @@
                                 <button class="btn btn-danger mt-3 " id="btnDeleteRental" type="button"><i
                                         class="fas fa-trash"></i> Delete Rental
                                 </button>
-                                <button class="btn mt-3" id="btnClearRental" style="background-color: #8e9090; color: white"
+                                <button class="btn mt-3" id="btnClearRental"
+                                        style="background-color: #8e9090; color: white"
                                         type="button">Clear
                                 </button>
                             </div>
@@ -1583,7 +1591,6 @@
 <script src="controller/AdminController.js"></script>
 <script src="controller/RegistrationController.js"></script>
 <script>
-
 
 
     var navbar = document.getElementById("navSection");
@@ -1728,8 +1735,13 @@
 
 
     $("#registerBtn").click(function () {
-        clearSignupTextFields();
-        //addAdmin();
+       // clearSignupTextFields();
+        if ($("#changeUserType").text()==='Admin') {
+            addAdmin();
+        }else if ($("#changeUserType").text()==='User') {
+            saveCustomer();
+        }
+
         // $("#cusName").css("border-color","red");
     });
 

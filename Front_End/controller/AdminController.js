@@ -3,7 +3,21 @@
  * @since - v0.1.0
  **/
 
+$("#changeUserType").click(function () {
+    changeType();
+});
+function changeType(){
+    let ty=$("#changeUserType").text();
+    if (ty==='User'){
+        $("#changeUserType").text('Admin');
+        $("#sec2").css('display','none');
 
+    }
+    else if (ty==='Admin'){
+        $("#changeUserType").text('User');
+        $("#sec2").css('display','block');
+    }
+}
 function addAdmin() {
     let id = $('#cusID').val();
     let name = $('#cusName').val();
@@ -31,6 +45,7 @@ function addAdmin() {
         success: function (resp) {
             if (resp.data === true) {
                 alert(resp.massage);
+                clearSignupTextFields();
             }
         },
         error: function (ob) {

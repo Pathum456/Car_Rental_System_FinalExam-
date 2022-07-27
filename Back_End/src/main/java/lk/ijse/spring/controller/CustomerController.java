@@ -31,7 +31,7 @@ public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil saveCustomer(CustomerDTO dto) {
+    public ResponseUtil saveCustomer(@RequestBody CustomerDTO dto) {
         service.saveCustomer(dto);
         return new ResponseUtil(200, "Saved", true);
     }
