@@ -2,6 +2,7 @@
  * @author _ Pathum_Kaleesha
  * @since - v0.1.0
  **/
+driverLoadTable();
 function addDriver() {
     let id = $('#driverLicenceNo').val();
     let name = $('#name').val();
@@ -21,17 +22,21 @@ function addDriver() {
         username: username,
         password: password
     }
-    console.log(driver);
 
     $.ajax({
+
         url: baseUrl2,
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(driver),
         success: function (resp) {
             if (resp.data === true) {
+
                 //alert(resp.massage);
-                alert("driver added");
+                console.log(resp);
+
+
+              driverLoadTable();
                // clearSignupTextFields();
             }
         },
@@ -39,5 +44,31 @@ function addDriver() {
 
             /*alert(ob.massage);*/
         }
-    })
+    });
+
+}
+
+function driverLoadTable() {
+    $("#tblDriverJson").empty();
+    $.ajax({
+
+        url: baseUrl2,
+        method: "GET",
+        //contentType: "application/json",
+        //data: JSON.stringify(driver),
+        success: function (resp) {
+
+            console.log(resp.data);
+            for (let driver of resp.data) {
+                let row = `<tr><td>${driver.licenceNo}</td><td>${driver.name}</td><td>${driver.address}</td><td>${driver.contactNo}</td><td>${driver.nicNo}</td><td>${driver.username}</td><td>${driver.password}</td><td>${driver.availability}</td></tr>`;
+                $("#tblDriverJson").append(row);
+            }
+            //alert(resp.massage);
+            // clearSignupTextFields();
+        },
+        error: function (ob) {
+            /*alert(ob.massage);*/
+        }
+    });
+
 }

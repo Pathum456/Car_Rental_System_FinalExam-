@@ -72,12 +72,14 @@ var licenceImg=$('#imgLicence').val();
 var username=$('#cusUserName').val();
 var password=$('#password').val();
 
+/*
 var fileObjectNic1 = $('#imgNiCFront')[0].files[0];
-var fileNameNic1 = id + "-nicfront-" + $('#imgNiCFront')[0].files[0].name;
+//var fileNameNic1 = id + "-nicfront-" + $('#imgNiCFront')[0].files[0].name;
 var data = new FormData();
 data.append("nicf", fileObjectNic1, fileNameNic1);
 data.append("nicb", fileObjectNic2, fileNameNic2);
 data.append("licenceImg", fileObjectLicence, fileNameLicence);
+*/
 var cusotmer = {
     customerId: cusID,
     name: cusName,
@@ -85,8 +87,8 @@ var cusotmer = {
     contactNo: contact,
     email: cusEmail,
     nicNo: cusNicNo,
-    nicFrontImg:fileObjectNic1,
-    nicBackImg:nicBackImg,
+   /* nicFrontImg:fileObjectNic1,
+    nicBackImg:nicBackImg,*/
     licenceNo:licenceNo,
     licenceImg:licenceImg,
     username: username,
