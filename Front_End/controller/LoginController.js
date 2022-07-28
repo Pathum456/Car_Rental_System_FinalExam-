@@ -32,7 +32,13 @@ function searchAdmin(userType, username, password) {
             method: "GET",
             success: function (res) {
                 if (res.data === true) {
-                    location.replace("AdminDashBoard.html");
+                    $("#dashBoardContent").css("display", "none");
+                    $("#carContent").css("display", "none");
+                    $("#loginForm").css("display", "none");
+                    $("#aboutContent").css("display", "none");
+                    $("#serviceContent").css("display", "none");
+                    $("#adminDash").css("display", "block");
+                    $("#ManageTableCar").css("display", "none");
                 } else {
                     alert(res.massage);
                 }

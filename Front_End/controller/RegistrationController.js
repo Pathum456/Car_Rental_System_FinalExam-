@@ -63,12 +63,15 @@ var cusaddress=$('#cusAddress').val();
 var contact=$('#cusContact').val();
 var cusEmail=$('#cusEmail').val();
 var cusNicNo=$('#cusNic').val();
+/*
 var nicFrontImg=$('#imgNiCFront').val();
 var nicBackImg=$('#imgNiCBack').val();
+*/
 var licenceNo=$('#cusLicence').val();
 var licenceImg=$('#imgLicence').val();
 var username=$('#cusUserName').val();
 var password=$('#password').val();
+
 var fileObjectNic1 = $('#imgNiCFront')[0].files[0];
 var fileNameNic1 = id + "-nicfront-" + $('#imgNiCFront')[0].files[0].name;
 var data = new FormData();
@@ -82,7 +85,7 @@ var cusotmer = {
     contactNo: contact,
     email: cusEmail,
     nicNo: cusNicNo,
-    nicFrontImg:nicFrontImg,
+    nicFrontImg:fileObjectNic1,
     nicBackImg:nicBackImg,
     licenceNo:licenceNo,
     licenceImg:licenceImg,

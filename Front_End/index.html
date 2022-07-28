@@ -14,7 +14,7 @@
     <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/fonts/css/all.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
 
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -26,7 +26,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js" type="text/javascript"></script>
-
+-->
 
     <link href="assets/style/style.css" rel="stylesheet">
     <link href="assets/style/dashBoardContentStyle.css" rel="stylesheet">
@@ -435,8 +435,8 @@
                     <p class="text-white-50 mb-3">Please enter your email and password!</p>
                     <form id="LoginFormDetails">
                         <div class="form-outline form-white mb-4">
-                            <input class="form-control form-control-lg" id="userEmail" type="email"/>
-                            <label class="form-label" for="userEmail">Email</label>
+                            <input class="form-control form-control-lg" id="userEmail" type="text"/>
+                            <label class="form-label" for="userEmail">User Name</label>
                         </div>
                         <div class="form-outline form-white mb-4">
                             <input class="form-control form-control-lg" id="userPassword" type="password"/>
@@ -474,6 +474,7 @@
         </div>
     </div>
 </section>
+
 <!--Login form Content End-->
 
 <!-- ========================= -->
@@ -549,7 +550,7 @@
                             <div class="mb-3">
                                 <label class="form-label" for="password">Password</label>
                                 <input class="form-control" id="password" name="Password" placeholder="Password"
-                                       type="text">
+                                       type="password">
                             </div>
                             <div class="col-3">
                                 <button class="btn btn-success " id="registerBtn" type="button">Register</button>
@@ -904,15 +905,14 @@
         <section class="container-fluid  bg-black text-white">
             <h1 class="fw-bold">Manage Car</h1>
         </section>
-        <section class="container-fluid mt-3">
+        <section class="container-fluid mt-3" >
             <div class="row mt-3">
                 <div class="col-4">
                     <form id="carForm">
                         <section id="sec1Car">
                             <div class="mb-sm-0">
                                 <label class="form-label" for="carRegisterId">Register ID</label>
-                                <input class="form-control" id="carRegisterId" name="id" placeholder="Register ID"
-                                       type="text">
+                                <input class="form-control" id="carRegisterId" name="id" placeholder="Register ID" type="text">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="carBrand">Car Band(ex:Toyota,Suzuki) </label>
@@ -926,15 +926,12 @@
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="carPassengers">No Of Passengers</label>
-                                <input class="form-control" id="carPassengers" name="passengers"
-                                       placeholder="No of Passengers"
+                                <input class="form-control" id="carPassengers" name="passengers" placeholder="No of Passengers"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
-                                <label class="form-label" for="carTransmissionType">Transmission
-                                    Type(Auto,Manual)</label>
-                                <input class="form-control" id="carTransmissionType" name="transmission"
-                                       placeholder="Transmission Type"
+                                <label class="form-label" for="carTransmissionType">Transmission Type(Auto,Manual)</label>
+                                <input class="form-control" id="carTransmissionType" name="transmission" placeholder="Transmission Type"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
@@ -943,8 +940,7 @@
                                        type="text">
                             </div>
                             <div class="row-cols-2">
-                                <button class="btn btn-warning" href="#" id="LinkBackToTable" type="button"><< back
-                                </button>
+                                <button type="button" class="btn btn-warning" id="LinkBackToTable" href="#"><< back</button>
                             </div>
                         </section>
                         <section id="sec2Car">
@@ -960,34 +956,29 @@
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="monthlyRate">Monthly Rate</label>
-                                <input class="form-control" id="monthlyRate" name="monthlyRate"
-                                       placeholder="Monthly Rate"
+                                <input class="form-control" id="monthlyRate" name="monthlyRate" placeholder="Monthly Rate"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="mileagePrice">Free Mileage Price</label>
-                                <input class="form-control" id="mileagePrice" name="mileagePrice"
-                                       placeholder="Free Mileage Price"
+                                <input class="form-control" id="mileagePrice" name="mileagePrice" placeholder="Free Mileage Price"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="mileageDuration">Free Mileage Duration</label>
-                                <input class="form-control" id="mileageDuration" name="mileageDuration"
-                                       placeholder="Free Mileage Duration"
+                                <input class="form-control" id="mileageDuration" name="mileageDuration" placeholder="Free Mileage Duration"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="priceOfExtraKM">Price Of Extra KM</label>
-                                <input class="form-control" id="priceOfExtraKM" name="priceOfExtraKM"
-                                       placeholder="Price Of Extra KM"
+                                <input class="form-control" id="priceOfExtraKM" name="priceOfExtraKM" placeholder="Price Of Extra KM"
                                        type="text">
                             </div>
                         </section>
                         <section id="sec3Car">
                             <div class="mb-sm-0">
                                 <label class="form-label" for="lossDamageWaiver">loss Damage Waiver</label>
-                                <input class="form-control" id="lossDamageWaiver" name="lossDamageWaiver"
-                                       placeholder="loss Damage Waiver"
+                                <input class="form-control" id="lossDamageWaiver" name="lossDamageWaiver" placeholder="loss Damage Waiver"
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
@@ -997,25 +988,25 @@
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="frontViewIm">Front View Image</label>
-                                <input class="form-control" id="frontViewIm" name="frontViewIm" type="file">
+                                <input type="file" class="form-control" id="frontViewIm" name="frontViewIm">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="backViewIm">Back View Image</label>
-                                <input class="form-control" id="backViewIm" name="backViewIm" type="file">
+                                <input type="file" class="form-control" id="backViewIm" name="backViewIm">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="sideViewIm">Side View Image</label>
-                                <input class="form-control" id="sideViewIm" name="sideViewIm" type="file">
+                                <input type="file" class="form-control" id="sideViewIm" name="sideViewIm">
                             </div>
                             <div class="mb-sm-0">
                                 <label class="form-label" for="internalViewIm">Internal View Image</label>
-                                <input class="form-control" id="internalViewIm" name="internalViewIm" type="file">
+                                <input type="file" class="form-control" id="internalViewIm" name="internalViewIm">
                             </div>
 
                             <div class="row-cols-4">
-                                <button class="btn btn-success" id="addCar" type="button">Save</button>
-                                <button class="btn btn-primary" id="updateCar" type="button">Update</button>
-                                <button class="btn btn-danger" id="deleteCar" type="button">Delete</button>
+                                <button type="button" class="btn btn-success" id="addCar">Save</button>
+                                <button type="button" class="btn btn-primary" id="updateCar">Update</button>
+                                <button type="button" class="btn btn-danger" id="deleteCar">Delete</button>
                             </div>
                         </section>
 
@@ -1039,7 +1030,7 @@
         <h1 class="fw-bold">Manage User</h1>
     </section>
     <div id="manageUserTable">
-        <div class="col-5">
+        <div class="">
             <table class="table table-bordered table-hover">
                 <thead class="bg-white text-black">
                 <tr>
@@ -1060,19 +1051,19 @@
                 </thead>
                 <tbody id="tblUserJson">
                 <tr>
-                    <td>C001</td>
-                    <td>Chandana</td>
-                    <td>Matara</td>
-                    <td>0719543011</td>
-                    <td>chandana@gmail.com</td>
-                    <td>97857362V</td>
                     <td></td>
                     <td></td>
-                    <td>65788890</td>
                     <td></td>
-                    <td>saman</td>
-                    <td>saman1234</td>
-                    <td>pending</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>
@@ -1142,9 +1133,9 @@
                                        type="text">
                             </div>
                             <div class="row-cols-4">
-                                <button class="btn btn-success" id="addDriver" type="button">Save</button>
-                                <button class="btn btn-primary" id="updateDriver" type="button">Update</button>
-                                <button class="btn btn-danger" id="deleteDriver" type="button">Delete</button>
+                                <button class="btn btn-success" id="addDriverBtn" type="button">Save</button>
+                                <button class="btn btn-primary" id="updateDriverBtn" type="button">Update</button>
+                                <button class="btn btn-danger" id="deleteDriverBtn" type="button">Delete</button>
                             </div>
                         </section>
                     </form>
@@ -1167,15 +1158,15 @@
                             </thead>
                             <tbody id="tblDriverJson">
                             <tr>
-                                <td>C001</td>
-                                <td>Chandana</td>
-                                <td>Matara</td>
-                                <td>0719543011</td>
-                                <td>chandana@gmail.com</td>
-                                <td>97857362V</td>
-                                <td>saman</td>
-                                <td>saman1234</td>
-                                <td>true</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
@@ -1188,7 +1179,7 @@
 <!--Manage Driver Content End-->
 
 <!--Booking Request Form Start-->
-<section class="container-fluid" id="bookingRequest">
+<!--<section class="container-fluid" id="bookingRequest">
     <header class="d-flex justify-content-center " id="header">
         <section class="container-fluid  align-items-center" id="navSection" style=" z-index: 999;padding: 0">
 
@@ -1582,7 +1573,7 @@
         </div>
     </div>
 
-</section>
+</section>-->
 <!--Booking Request Form End-->
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
@@ -1590,10 +1581,11 @@
 <script src="controller/LoginController.js"></script>
 <script src="controller/AdminController.js"></script>
 <script src="controller/RegistrationController.js"></script>
+<script src="controller/DriverController.js"></script>
 <script>
 
 
-    var navbar = document.getElementById("navSection");
+    /*var navbar = document.getElementById("navSection");
     var sticky = navbar.offsetTop;
 
     function scrollFunction() {
@@ -1607,7 +1599,7 @@
 
         }
 
-    }
+    }*/
 
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
@@ -1620,6 +1612,7 @@
     $("#manageCar").css("display", "none");
     $("#manageUser").css("display", "none");
     $("#manageDriver").css("display", "none");
+
 
     var uEmail = $("#typeEmailX").val();
     var passWord = $("#typePasswordX").val();
@@ -1720,8 +1713,8 @@
         $("#manageDriver").css("display", "block");
     });
     $("#linkCarManage").click(function () {
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "block");
+        $("#ManageTableCar").css("display", "block");
+        $("#manageCar").css("display", "none");
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "none");
 
@@ -1732,7 +1725,17 @@
         $("#manageUser").css("display", "block");
         $("#manageDriver").css("display", "none");
     });
+    $("#manageCarDetails").click(function () {
 
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "block");
+
+    }); $("#LinkBackToTable").click(function () {
+
+        $("#ManageTableCar").css("display", "block");
+        $("#manageCar").css("display", "none");
+
+    });
 
     $("#registerBtn").click(function () {
        // clearSignupTextFields();
@@ -1745,6 +1748,10 @@
         // $("#cusName").css("border-color","red");
     });
 
+
+    $("#addDriverBtn").click(function (){
+        addDriver();
+    });
 </script>
 </body>
 </html>

@@ -18,16 +18,38 @@
     margin-top: 5%;
 }
  /*---------------------------------------*/
-
-/*mange table car*/
-#manageCarTableContent{
+/*manage car*/
+#manageCarContent{
     position: absolute;
     width: 83vw;
     height: 100vh;
     right: 0;
     top: 70px;
-    left: 17vw;
-    background: gray !important;
+    left: 20vw;
+    /*background: gray !important;*/
+}
+#sec1Car{
+    position: absolute;
+    left: 4%;
+}
+#sec2Car{
+    position: absolute;
+    left: 35%;
+}
+#sec3Car{
+    position: absolute;
+    left: 66%;
+}
+
+/*mange table car*/
+#manageCarTableContent{
+    position: absolute;
+    width: 80vw;
+    height: 88vh;
+    right: 0;
+    top: 70px;
+    left: 20vw;
+   /* background: gray !important;*/
 }
 #manageCarDetails{
     position: absolute;
@@ -38,22 +60,22 @@
 /*mange Customer*/
 #manageUserTable{
     position: absolute;
-    width: 83vw;
-    height: 100vh;
+    width: 80vw;
+    height: 88vh;
     right: 0;
     top: 70px;
-    left: 17vw;
-    background: gray !important;
+    left: 20vw;
+   /* background: gray !important;*/
 }
 /*manage driver*/
 #manageDriverContent{
     position: absolute;
     width: 83vw;
-    height: 100vh;
+    height: 88vh;
     right: 0;
     top: 70px;
-    left: 17vw;
-    background: gray !important;
+    left: 20vw;
+   /* background: gray !important;*/
 }
 #sec1Driver{
     position: absolute;
