@@ -13,6 +13,7 @@ function addDriver() {
     let username = $('#driverUserName').val();
     let password = $('#driverPassword').val();
     /*let password = $('#availability').val();*/
+
     if (id) var driver = {
         licenceNo: id,
         name: name,
@@ -34,30 +35,24 @@ function addDriver() {
 
                 //alert(resp.massage);
                 console.log(resp);
-
-
               driverLoadTable();
                // clearSignupTextFields();
             }
         },
         error: function (ob) {
-
             /*alert(ob.massage);*/
         }
     });
-
 }
 
 function driverLoadTable() {
     $("#tblDriverJson").empty();
     $.ajax({
-
         url: baseUrl2,
         method: "GET",
         //contentType: "application/json",
         //data: JSON.stringify(driver),
         success: function (resp) {
-
             console.log(resp.data);
             for (let driver of resp.data) {
                 let row = `<tr><td>${driver.licenceNo}</td><td>${driver.name}</td><td>${driver.address}</td><td>${driver.contactNo}</td><td>${driver.nicNo}</td><td>${driver.username}</td><td>${driver.password}</td><td>${driver.availability}</td></tr>`;
