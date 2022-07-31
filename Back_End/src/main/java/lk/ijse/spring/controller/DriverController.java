@@ -35,13 +35,13 @@ public class DriverController {
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateCustomer(@RequestBody DriverDTO dto) {
         service.updateDriver(dto);
-        return new ResponseUtil(200, "Updated", null);
+        return new ResponseUtil(200, "Updated", true);
     }
 
     @DeleteMapping(params = {"licenceNo"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil deleteDriver(@RequestParam String licenceNo) {
         service.deleteDriver(licenceNo);
-        return new ResponseUtil(200, "Deleted", null);
+        return new ResponseUtil(200, "Deleted", true);
     }
 
     @GetMapping(path = "/{licenceNo}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -70,7 +70,7 @@ public class DriverController {
     @PutMapping(path = "/updateAvailable/{licenceNo}",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateDriverAvailable(@PathVariable String licenceNo){
         service.updateDriverAvailable(licenceNo);
-        return new ResponseUtil(200,"Updated",null);
+        return new ResponseUtil(200,"Updated",true);
     }
 
     @PutMapping(path = "/updateNonAvailable/{licenceNo}",produces = MediaType.APPLICATION_JSON_VALUE)

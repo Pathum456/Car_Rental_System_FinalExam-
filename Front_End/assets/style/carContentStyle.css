@@ -32,3 +32,18 @@
     right: 1%;
     left: 1%;
 }
+
+.btnBD{
+    width: 100%;
+    border: 1px solid black;
+}
+#offcanvasWithBothOptions{
+    background: cadetblue !important;
+    min-width: 100px;
+    width: 25vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:11%;
+    transition: all 0.4s;
+}
