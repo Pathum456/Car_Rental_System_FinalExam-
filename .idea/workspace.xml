@@ -11,12 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cfde314d-011d-4dab-99fb-525e0e8a1e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/DriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/DriverController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/DriverController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/DriverController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/DriverController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/DriverController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/controller/DriverController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/DriverController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +244,10 @@
       <workItem from="1659197535539" duration="6380000" />
       <workItem from="1659250551219" duration="4506000" />
       <workItem from="1659269003643" duration="3044000" />
-      <workItem from="1659283391364" duration="6306000" />
+      <workItem from="1659283391364" duration="6584000" />
+      <workItem from="1659362786428" duration="660000" />
+      <workItem from="1659413165948" duration="1026000" />
+      <workItem from="1659419127561" duration="495000" />
     </task>
     <servers />
   </component>

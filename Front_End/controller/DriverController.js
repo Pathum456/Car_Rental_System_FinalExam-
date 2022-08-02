@@ -118,7 +118,7 @@ function deleteDriver() {
 
     // initiate the request
     $.ajax({
-        url: baseUrl2 + "?id=" + LId,// viya query string
+        url: baseUrl2 + "?licenceNo=" + LId,// viya query string
         method: "DELETE",
         //data:data,// application/x-www-form-urlencoded
         success: function (res) {
