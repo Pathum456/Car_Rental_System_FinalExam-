@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cfde314d-011d-4dab-99fb-525e0e8a1e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/assets&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -100,11 +100,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Front_End/assets" />
       <recent name="$PROJECT_DIR$/Front_End" />
       <recent name="$PROJECT_DIR$/Front_End/assets/boostrap/js" />
       <recent name="$PROJECT_DIR$/Front_End/controller" />
       <recent name="$PROJECT_DIR$/Front_End/assets/images" />
-      <recent name="$PROJECT_DIR$/Front_End/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Front_End/assets/boostrap/js" />
@@ -247,7 +247,8 @@
       <workItem from="1659283391364" duration="6584000" />
       <workItem from="1659362786428" duration="660000" />
       <workItem from="1659413165948" duration="1026000" />
-      <workItem from="1659419127561" duration="495000" />
+      <workItem from="1659419127561" duration="7965000" />
+      <workItem from="1659457251529" duration="8457000" />
     </task>
     <servers />
   </component>

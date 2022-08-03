@@ -95,7 +95,7 @@ public class CustomerController {
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg, @PathVariable String id) {
         try {
-            String projectPath = String.valueOf(new File("/media/kaleesha/Disk D/Easy_Car_Rent"));
+            String projectPath = String.valueOf(new File("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images"));
             File uploadsDir = new File(projectPath + "/Customers");
             uploadsDir.mkdir();
             nicf.transferTo(new File(uploadsDir.getAbsolutePath() + "/" + nicf.getOriginalFilename()));
@@ -108,11 +108,11 @@ public class CustomerController {
 
             service.uploadCustomerImages(nicfPath, nicbPath, licenceImgPath, id);
 
-            return new ResponseUtil(200, "Uploaded", null);
+            return new ResponseUtil(200, "Uploaded", true);
 
         } catch (IOException e) {
             e.printStackTrace();
-            return new ResponseUtil(500, "Error", null);
+            return new ResponseUtil(500, "Error", false);
         }
     }
 
