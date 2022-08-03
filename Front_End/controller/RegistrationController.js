@@ -92,11 +92,12 @@ function saveCustomer() {
             /*if (resp.data() === true) {
                 clearSignupTextFields();
             }
-            */alert(resp.massage);
+            */
+            /*alert(resp.message);*/
         },
         error: function (ob) {
 
-            alert(ob.massage);
+            /*alert(ob.message);*/
         }
     });
 

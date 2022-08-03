@@ -11,7 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cfde314d-011d-4dab-99fb-525e0e8a1e89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/src/main/java/lk/ijse/spring/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/classes/lk/ijse/spring/controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/customerContent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +258,7 @@
       <workItem from="1659413165948" duration="1026000" />
       <workItem from="1659419127561" duration="7965000" />
       <workItem from="1659457251529" duration="8457000" />
+      <workItem from="1659504621369" duration="1757000" />
     </task>
     <servers />
   </component>

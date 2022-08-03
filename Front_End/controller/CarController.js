@@ -51,11 +51,11 @@ function addCar() {
                 clearSignupTextFields();
             }
             */
-            alert(resp.massage);
+            alert(resp.message);
         },
         error: function (ob) {
 
-            alert(ob.massage);
+            alert(ob.message);
         }
     });
 }
@@ -80,7 +80,7 @@ function uploadCarImages(id) {
     data.append("sideImg", fileObjectCar4, fileNameCar4);
 
     $.ajax({
-        url: baseUrl3 + "/up/" + id,
+        url: baseUrl4 + "/up/" + id,
         method: "PUT",
         async: true,
         contentType: false,
