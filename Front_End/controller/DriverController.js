@@ -210,15 +210,18 @@ let regLoginUsernameD = /^[A-z0-9]{6,10}$/;
 let regLoginPasswordD = /^[A-z0-9@#$%&!*]{8,}$/;
 
 
-/*
-driverLicenceNo
+//Driver Manage Validate
+$('#driverLicenceNo').on('keyup', function () {
+    var driverLicenceNo = $('#driverLicenceNo').val();
+    if (regDrivingLicenceNoD.test(driverLicenceNo)) {
+        $("#driverLicenceNo").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#driverLicenceNo").css('border', '2px solid red');
+        return false;
+    }
+});
 
-address
-contactNo
-nicNo
-driverUserName
-driverPassword
-*/
 $('#name').on('keyup', function () {
     var name = $('#name').val();
     if (regName.test(name)) {
@@ -228,4 +231,61 @@ $('#name').on('keyup', function () {
         $("#name").css('border', '2px solid red');
         return false;
     }
-})
+});
+
+$('#address').on('keyup', function () {
+    var address = $('#address').val();
+    if (regAddressD.test(address)) {
+        $("#address").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#address").css('border', '2px solid red');
+        return false;
+    }
+});
+
+$('#contactNo').on('keyup', function () {
+    var contactNo = $('#contactNo').val();
+    if (regContactNoD.test(contactNo)) {
+        $("#contactNo").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#contactNo").css('border', '2px solid red');
+        return false;
+    }
+});
+
+$('#nicNo').on('keyup', function () {
+    var nicNo = $('#nicNo').val();
+    if (regNicNoD.test( nicNo)) {
+        $("#nicNo").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#nicNo").css('border', '2px solid red');
+        return false;
+    }
+});
+
+$('#driverUserName').on('keyup', function () {
+    var driverUserName = $('#nicNo').val();
+    if (regLoginUsernameD.test( driverUserName)) {
+        $("#driverUserName").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#driverUserName").css('border', '2px solid red');
+        return false;
+    }
+});
+
+$('#driverPassword').on('keyup', function () {
+    var driverPassword = $('#nicNo').val();
+    if (regLoginUsernameD.test( driverPassword)) {
+        $("#driverPassword").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#driverPassword").css('border', '2px solid red');
+        return false;
+    }
+});
+
+
