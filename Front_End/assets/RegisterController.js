@@ -459,17 +459,17 @@ $('#registerBtn').click(function () {
     var userType = $('#cmbType').find('option:selected').text();
     console.log(userType);
     if (userType === "Customer") {
-        if ($('#txtName').val() != "") {
-            if ($('#txtContact').val() != "") {
-                if ($('#txtAddress').val() != "") {
-                    if ($('#txtEmail').val() != "") {
-                        if ($('#txtLicene').val() != "") {
-                            if ($('#txtNIC').val() != "") {
-                                if ($('#txtUserName').val() != "") {
-                                    if ($('#txtPassword').val() != "") {
-                                        if ($('#imgNiCFront').val() != "") {
-                                            if ($('#imgNiCBack').val() != "") {
-                                                if ($('#imgLicence').val() != "") {
+        if ($('#txtName').val() !== "") {
+            if ($('#txtContact').val() !== "") {
+                if ($('#txtAddress').val() !== "") {
+                    if ($('#txtEmail').val() !== "") {
+                        if ($('#txtLicene').val() !== "") {
+                            if ($('#txtNIC').val() !== "") {
+                                if ($('#txtUserName').val() !== "") {
+                                    if ($('#txtPassword').val() !== "") {
+                                        if ($('#imgNiCFront').val() !== "") {
+                                            if ($('#imgNiCBack').val() !== "") {
+                                                if ($('#imgLicence').val() !== "") {
                                                     let res = confirm("Do you want to add this customer?");
                                                     if (res) {
                                                         addCustomer();
@@ -520,12 +520,12 @@ $('#registerBtn').click(function () {
         }
     }
     if (userType === "Admin") {
-        if ($('#txtName').val() != "") {
-            if ($('#txtContact').val() != "") {
-                if ($('#txtAddress').val() != "") {
-                    if ($('#txtEmail').val() != "") {
-                        if ($('#txtUserName').val() != "") {
-                            if ($('#txtPassword').val() != "") {
+        if ($('#txtName').val() !== "") {
+            if ($('#txtContact').val() !== "") {
+                if ($('#txtAddress').val() !== "") {
+                    if ($('#txtEmail').val() !== "") {
+                        if ($('#txtUserName').val() !== "") {
+                            if ($('#txtPassword').val() !== "") {
                                 let res = confirm("Do you want to add this admin?");
                                 if (res) {
                                     addAdmin();

@@ -201,3 +201,31 @@ function clearForm() {
     $("#driverPassword").val("");
     $("#driverLicenceNo").focus();
 }
+let regNameD = /^[A-z .]{3,}$/;
+let regAddressD = /^[A-z ,.0-9]{3,}$/;
+let regContactNoD = /^(0)[1-9][0-9][0-9]{7}$/;
+let regDrivingLicenceNoD = /^(B)[0-9]{7}$/;
+let regNicNoD = /^[0-9]{9}(V)|[0-9]{12}$/;
+let regLoginUsernameD = /^[A-z0-9]{6,10}$/;
+let regLoginPasswordD = /^[A-z0-9@#$%&!*]{8,}$/;
+
+
+/*
+driverLicenceNo
+
+address
+contactNo
+nicNo
+driverUserName
+driverPassword
+*/
+$('#name').on('keyup', function () {
+    var name = $('#name').val();
+    if (regName.test(name)) {
+        $("#name").css('border', '2px solid green');
+        return true;
+    } else {
+        $("#name").css('border', '2px solid red');
+        return false;
+    }
+})

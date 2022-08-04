@@ -44,7 +44,7 @@ function addAdmin() {
         data: JSON.stringify(admin),
         success: function (resp) {
             if (resp.data === true) {
-                alert(resp.massage);
+                alert(resp.message);
                 clearSignupTextFields();
             }
         },

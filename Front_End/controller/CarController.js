@@ -92,3 +92,79 @@ function uploadCarImages(id) {
         }
     })
 }
+loadAllCarsTable();
+function loadAllCarsTable() {
+    $("#tblCarJson").empty();
+    $.ajax({
+        url: baseUrl4,
+        method: "GET",
+        //contentType: "application/json",
+        //data: JSON.stringify(driver),
+        success: function (resp) {
+            console.log(resp.data);
+            for (let car of resp.data) {
+                let row = `<tr> <td class="col-3">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="..." class="d-block w-100 carImg" src="#">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="#">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg"
+                                     src="#">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="..." class="d-block w-100 carImg" src="">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleFade"
+                                type="button">
+                            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleFade"
+                                type="button">
+                            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </td>
+                <td class="col-3">
+                    <div class="card-body">
+                        <h5 class="card-title">${car.brand} </h5>
+                        <p class="card-text">Good Condition,Max seed 140,
+                            Rent Price for 30 days 870$.</p>
+                    </div>
+                </td>
+                 <td class="col-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No of Passengers : <b>${car.noOfPassengers}</b></li>
+                        <li class="list-group-item">Transmission Type : <b>${car.transmissionType}</b></li>
+                        <li class="list-group-item">Fuel Type : <b> ${car.fuelType}</b></li>
+                    </ul>
+                </td>
+                 <td class="col-2">
+                    <ul>
+                        <li class="list-group-item"><b>${car.dailyRate}$/day</b></li>
+                    </ul>
+                </td>
+                 <td class="col-1">
+                    <button class="rentCarBtn" type="button" onclick="this.rentBokking()">Rent Car</button>
+                </td>
+                </tr>`;
+                $("#tblCarJson").append(row);
+            }
+            //alert(resp.massage);
+            // clearSignupTextFields();
+        },
+        error: function (ob) {
+            /*alert(ob.massage);*/
+        }
+    });
+
+}
+

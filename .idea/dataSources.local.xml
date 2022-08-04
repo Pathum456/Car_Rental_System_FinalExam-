@@ -21,7 +21,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema" qname="CarRentalSystem" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
