@@ -137,11 +137,6 @@ function saveCustomer() {
         data: JSON.stringify(customer),
         success: function (resp) {
             uploadCustomerImages(cusID);
-            alert("D");
-            /*if (resp.data() === true) {
-                clearSignupTextFields();
-            }
-            */
             clearSignupTextFields();// me deka save wela iwara unaama call karanna
             generateCustomerId();
             alert(resp.message);
@@ -163,6 +158,8 @@ function clearSignupTextFields() {
     $("#password").val('');
     $("#cusEmail").val('');
     $("#imgNiCFront").val('');
+    $("#imgNiCBack").val('');
+    $("#imgLicence").val('');
 
 }
 

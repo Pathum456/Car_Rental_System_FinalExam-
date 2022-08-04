@@ -159,11 +159,6 @@ function loadAllCarsTable() {
                 </tr>`;
                 $("#tblCarJson").append(row);
             }
-            //alert(resp.massage);
-            // clearSignupTextFields();
-        },
-        error: function (ob) {
-            /*alert(ob.massage);*/
         }
     });
 
