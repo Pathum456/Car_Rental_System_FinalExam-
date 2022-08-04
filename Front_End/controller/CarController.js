@@ -4,7 +4,7 @@
  **/
 var baseUrl4 = "http://localhost:8080/Back_End_war/api/v1/car";
 
-$("#addCar").click(function (){
+$("#addCar").click(function () {
     addCar();
 });
 
@@ -91,14 +91,12 @@ function uploadCarImages(id) {
     })
 }
 
-
 loadAllCarsTable();
+
 function loadAllCarsTable() {
     $("#tblCarJson").empty();
     $.ajax({
-        url: baseUrl4,
-        method: "GET",
-        //contentType: "application/json",
+        url: baseUrl4, method: "GET", //contentType: "application/json",
         //data: JSON.stringify(driver),
         success: function (resp) {
             console.log(resp.data);
@@ -174,9 +172,89 @@ function loadAllCarsTable() {
                 </td>
                 </tr>`;
                 $("#tblCarJson").append(row);
+
+
             }
         }
     });
 
+}
+loadDataCarManageTable();
+function loadDataCarManageTable() {
+    $("#tblCarManageJson").empty();
+    $.ajax({
+        url: baseUrl4,
+        method: "GET",
+        //contentType: "application/json",
+        //data: JSON.stringify(driver),
+        success: function (resp) {
+            console.log(resp.data);
+            for (let car of resp.data) {
+                let row = `<tr> <td>${car.registrationNO}</td><td>${car.brand}</td><td>${car.type}</td><td>${car.noOfPassengers}</td><td>${car.transmissionType}</td><td>${car.fuelType}</td><td>${car.dailyRate}</td><td>${car.monthlyRate}</td><td>${car.freeKmForPrice}</td><td>${car.freeKmForDuration}</td><td>${car.lossDamageWaiver}</td><td>${car.priceForExtraKm}</td><td>${car.completeKm}</td><td>${car.status}</td></tr>`;
+                $("#tblCarManageJson").append(row);
+                setCarDataToFields();
+            }
+        }
+    });
+}
+
+
+function setCarDataToFields() {
+    $("#tblCarManageJson>tr").click(function () {
+
+        $.ajax({
+            url: baseUrl4 + "/" +$(this).children().eq(0).text(),
+            method: "GET",
+            success: function (res) {
+                if (res.code === 200) {
+                    var car = res.data;
+                    $('#carRegisterId').val(car.registrationNO);
+                    $('#carBrand').val(car.brand);
+                    $('#carColor').val(car.color);
+                    $('#fuelType').val(car.fuelType);
+                    $('#carTransmissionType').val(car.transmissionType);
+                    $('#carPassengers').val(car.noOfPassengers);
+                    $('#dailyRate').val(car.dailyRate);
+                    $('#monthlyRate').val(car.monthlyRate);
+                    $('#mileagePrice').val(car.freeKmForPrice);
+                    $('#mileageDuration').val(car.freeKmForDuration);
+                    $('#lossDamageWaiver').val(car.lossDamageWaiver);
+                    $('#priceOfExtraKM').val(car.priceForExtraKm);
+                    $('#completeKm').val(car.completeKm);
+                    alert("Data Fix in Fields");
+                }
+            }
+        });
+    });
+
+    /*let frontViewPath = car.frontViewImg;
+    console.log(frontViewPath);
+    let frontViewImg = frontViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
+    let FrontViewImgSrc = "savedImages/Cars/" + frontViewImg;
+
+    let backViewPath = car.backViewImg;
+    let backViewImg = backViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let backViewImgSrc = "savedImages\\Cars\\" + backViewImg;
+    console.log(backViewImgSrc);
+
+    let sideViewPath = car.sideViewImg;
+    let sideViewImg = sideViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let sideViewImgSrc = "savedImages\\Cars\\" + sideViewImg;
+
+    let interiorViewPath = car.internalViewImg;
+    let interiorViewImg = interiorViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
+    let interiorViewImgSrc = "savedImages\\Cars\\" + interiorViewImg;
+
+    let fvImg = `<img src=${FrontViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
+    $('#divCarFrontView').append(fvImg);
+
+    let bvImg = `<img src=${backViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
+    $('#divCarBackView').append(bvImg);
+
+    let svImg = `<img src=${sideViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
+    $('#divCarSideView').append(svImg);
+
+    let ivImg = `<img src=${interiorViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
+    $('#divCarInteriorView').append(ivImg);*/
 }
 
