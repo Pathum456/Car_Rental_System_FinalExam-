@@ -48,10 +48,7 @@ function addCar() {
         data: JSON.stringify(car),
         success: function (resp) {
             uploadCarImages(carID);
-            /*if (resp.data() === true) {
-                clearSignupTextFields();
-            }
-            */
+            loadAllCarsTable();
             alert(resp.message);
         },
         error: function (ob) {
@@ -93,6 +90,8 @@ function uploadCarImages(id) {
         }
     })
 }
+
+
 loadAllCarsTable();
 function loadAllCarsTable() {
     $("#tblCarJson").empty();
@@ -103,23 +102,40 @@ function loadAllCarsTable() {
         //data: JSON.stringify(driver),
         success: function (resp) {
             console.log(resp.data);
+
             for (let car of resp.data) {
+                let frontViewPath = car.frontViewImg;
+                let frontViewImg = frontViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
+                let FrontViewImgSrc = "Saved_Images/Cars" + frontViewImg;
+
+                let sideViewPath = car.sideViewImg;
+                let sideViewImg = sideViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
+                let sideViewImgSrc = "Saved_Images/Cars" + sideViewImg;
+
+                let interiorViewPath = car.internalViewImg;
+                let interiorViewImg = interiorViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
+                let interiorViewImgSrc = "Saved_Images/Cars" + interiorViewImg;
+
+                let backViewPath = car.backViewImg;
+                let backViewImg = backViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
+                let backViewImgSrc = "Saved_Images/Cars" + backViewImg;
+
                 let row = `<tr> <td class="col-3">
                     <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img alt="..." class="d-block w-100 carImg" src="#">
+                                <img alt="..." class="d-block w-100 carImg" src=${FrontViewImgSrc}>
                             </div>
                             <div class="carousel-item">
                                 <img alt="..." class="d-block w-100 carImg"
-                                     src="#">
+                                     src=${sideViewImgSrc}>
                             </div>
                             <div class="carousel-item">
                                 <img alt="..." class="d-block w-100 carImg"
-                                     src="#">
+                                     src=${interiorViewImgSrc}>
                             </div>
                             <div class="carousel-item">
-                                <img alt="..." class="d-block w-100 carImg" src="">
+                                <img alt="..." class="d-block w-100 carImg" src=${backViewImgSrc}>
                             </div>
                         </div>
                         <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleFade"

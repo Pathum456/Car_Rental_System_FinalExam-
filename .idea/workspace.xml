@@ -10,15 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfde314d-011d-4dab-99fb-525e0e8a1e89" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/target/BackEnd-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/assets/RegisterController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/assets/RegisterController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/controller/CarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/CarController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/controller/DriverController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/DriverController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/controller/RegistrationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front_End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Front_End/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carInterImg-Screenshot from 2022-07-24 16-55-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carInterImg-b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carInterImg-bmwInsideFrontView.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carSideImg-Screenshot from 2022-07-24 16-55-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carSideImg-bmwInsideFrontView.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carSideImg-pos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carback-BMWFrontSide.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carback-ijse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carback-pos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carfront-b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Cars/CAT-0145-carfront-bmw4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Customers/C00-0001-licence-Screenshot from 2022-07-24 16-55-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Customers/C00-0001-nicback-Screenshot from 2022-07-24 16-55-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front_End/Saved_Images/Customers/C00-0001-nicfront-Screenshot from 2022-07-24 16-55-22.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,35 +86,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/assets&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1f73e13d757c981e460df4fc7c30553c&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "1f73e13d757c981e460df4fc7c30553c"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Front_End/assets" />
       <recent name="$PROJECT_DIR$/Front_End" />
+      <recent name="$PROJECT_DIR$/Front_End/assets" />
       <recent name="$PROJECT_DIR$/Front_End/assets/boostrap/js" />
       <recent name="$PROJECT_DIR$/Front_End/controller" />
       <recent name="$PROJECT_DIR$/Front_End/assets/images" />
@@ -258,7 +264,8 @@
       <workItem from="1659457251529" duration="8457000" />
       <workItem from="1659504621369" duration="17313000" />
       <workItem from="1659541987908" duration="5967000" />
-      <workItem from="1659591888628" duration="11490000" />
+      <workItem from="1659591888628" duration="11950000" />
+      <workItem from="1659631451278" duration="5178000" />
     </task>
     <servers />
   </component>
