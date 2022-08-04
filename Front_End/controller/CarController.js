@@ -23,6 +23,7 @@ function addCar() {
     var carLossDamageWaiver = $('#lossDamageWaiver').val();
     var carPriceOfExtraKM = $('#priceOfExtraKM').val();
     var carCompleteKm = $('#completeKm').val();
+
     var car = {
         registrationNO: carID,
         brand: carBrand,

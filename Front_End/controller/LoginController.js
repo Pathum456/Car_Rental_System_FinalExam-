@@ -18,6 +18,7 @@ function loginUser() {
 
     if (userType === "Admin") {
         searchAdmin(userType, username, password);
+        generateAdminId();
     } else if (userType === "Customer"){
         searchCustomer(userType, username, password);
     } else if (userType === "Driver"){
@@ -92,9 +93,20 @@ $('#loginCheckBtn').click(function () {
 });
 function logincar() {
     $("#dashBoardContent").css("display", "none");
-    $("#carContent").css("display", "block");
     $("#loginForm").css("display", "none");
+    $("#carContent").css("display", "block");
+    $("#signUp").css("display", "none");
     $("#serviceContent").css("display", "none");
     $("#aboutContent").css("display", "none");
     $("#adminDash").css("display", "none");
+    $("#ManageTableCar").css("display", "none");
+    $("#manageCar").css("display", "none");
+    $("#manageUser").css("display", "none");
+    $("#manageDriver").css("display", "none");
+    $("#paymentDetailsContent").css("display", "none");
+    $("#mainteneceContent").css("display", "none");
+    $("#reqContent").css("display", "none");
+    $("#responsesContent").css("display", "none");
+    $("#incomeReportContent").css("display", "none");
+    $("#CarBookingContent").css("display", "none");
 }

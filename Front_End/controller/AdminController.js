@@ -46,6 +46,10 @@ function addAdmin() {
             if (resp.data === true) {
                 alert(resp.message);
                 clearSignupTextFields();
+                if ($("#changeUserType").text()=== 'Admin'){
+                    generateAdminId();
+                }
+
             }
         },
         error: function (ob) {
@@ -53,4 +57,15 @@ function addAdmin() {
             /*alert(ob.massage);*/
         }
     })
+}
+function generateAdminId() {
+    $.ajax({
+        url: baseUrl1 + "/generateAdminID",
+        method: "GET",
+        success: function (res) {
+
+            $('#cusID').val("");
+            $('#cusID').val(res.data);
+        }
+    });
 }

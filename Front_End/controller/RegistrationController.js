@@ -137,10 +137,13 @@ function saveCustomer() {
         data: JSON.stringify(customer),
         success: function (resp) {
             uploadCustomerImages(cusID);
+            alert("D");
             /*if (resp.data() === true) {
                 clearSignupTextFields();
             }
             */
+            clearSignupTextFields();// me deka save wela iwara unaama call karanna
+            generateCustomerId();
             alert(resp.message);
         },
         error: function (ob) {
@@ -165,7 +168,7 @@ function clearSignupTextFields() {
 
 function uploadCustomerImages(id) {
     var fileObjectNic1 = $('#imgNiCFront')[0].files[0];
-    var fileNameNic1 = id + "-nicfront-" + $('#imgNiCFront')[0].files[0].name;
+    var fileNameNic1 = id + "-nicfront-" + ($('#imgNiCFront')[0].files[0].name);
 
     var fileObjectNic2 = $('#imgNiCBack')[0].files[0];
     var fileNameNic2 = id + "-nicback-" + $('#imgNiCBack')[0].files[0].name;
@@ -174,9 +177,9 @@ function uploadCustomerImages(id) {
     var fileNameLicence = id + "-licence-" + $('#imgLicence')[0].files[0].name;
 
     var data1 = new FormData();
-    data.append("nicf", fileObjectNic1, fileNameNic1);
-    data.append("nicb", fileObjectNic2, fileNameNic2);
-    data.append("licenceImg", fileObjectLicence, fileNameLicence);
+    data1.append("nicf", fileObjectNic1, fileNameNic1);
+    data1.append("nicb", fileObjectNic2, fileNameNic2);
+    data1.append("licenceImg", fileObjectLicence, fileNameLicence);
 console.log(data1);
     $.ajax({
         url: baseUrl3 + "/up/" + id,
@@ -309,8 +312,8 @@ $("#registerBtn").click(function () {
         if ($('#cusName').val() !== "" ) {
             if ($('#cusName').val() !== "" && $('#cusContact').val() !== "" && $('#cusAddress').val() !== "" && $('#cusEmail').val() !== "" && $('#cusNic').val() !== "" && $('#cusLicence').val() !== "" && $('#cusUserName').val() !== "" && $('#password').val() !== "" && $('#imgNiCFront').val() !== "" && $('#imgNiCBack').val() !== "" && $('#imgLicence').val() !== "") {
                 saveCustomer();
-                clearSignupTextFields();
-                generateCustomerId();
+                // clearSignupTextFields();// me deka save wela iwara unaama call karanna
+                // generateCustomerId();
             }
             /*if ($('#cusContact').val() !== "") {
                 if ($('#cusAddress').val() !== "") {

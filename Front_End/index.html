@@ -2143,8 +2143,9 @@
     $("#linkCar").click(function () {
         /*$("#loginForm").css("display", "block");*/
         $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block");
         $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "block");
+        $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#aboutContent").css("display", "none");
         $("#adminDash").css("display", "none");
@@ -2154,10 +2155,19 @@
         $("#manageDriver").css("display", "none");
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
     });
 
     $("#rentCarBtnDashBoard").click(function () {
+        $("#dashBoardContent").css("display", "none");
         $("#loginForm").css("display", "block");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
         $("#adminDash").css("display", "none");
         $("#ManageTableCar").css("display", "none");
         $("#manageCar").css("display", "none");
@@ -2165,6 +2175,10 @@
         $("#manageDriver").css("display", "none");
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
     });
 
     $("#linkHome").click(function () {
@@ -2195,17 +2209,20 @@
         $("#adminDash").css("display", "none");
 
     });
+
     $("#loginCloseBtn").click(function () {
         $("#rentCarBtnDashBoard").css("display", "block");
         $("#loginForm").css("display", "none");
 
     });
+
     $("#linkRegistration").click(function () {
         $("#signUp").css("display", "block");
         $("#navbar").css("display", "none");
         $("#rentCarBtnDashBoard").css("display", "none");
         $("#adminDash").css("display", "none");
     });
+
     $("#loginCheckBtn").click(function () {
         /*  if ($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user123") {
               $("#dashBoardContent").css("display", "none");
@@ -2223,6 +2240,7 @@
          }*/
         loginUser();
     });
+
     $("#signCloseBtn").click(function () {
         $("#signUp").css("display", "none");
         $("#navbar").css("display", "block");
@@ -2238,101 +2256,272 @@
         $("#signUp").css("display", "block");
         $("#adminDash").css("display", "none");
     });
+
     $("#linkServices").click(function () {
         $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "block");
         $("#aboutContent").css("display", "none");
         $("#adminDash").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
 
     });
+
     $("#linkAbout").click(function () {
         $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#aboutContent").css("display", "block");
         $("#adminDash").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
 
     });
+
     $("#linkDriver").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
         $("#ManageTableCar").css("display", "none");
         $("#manageCar").css("display", "none");
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "block");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
     });
     $("#linkCarManage").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
         $("#ManageTableCar").css("display", "block");
         $("#manageCar").css("display", "none");
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
 
     });
     $("#linkCustomer").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
         $("#ManageTableCar").css("display", "none");
         $("#manageCar").css("display", "none");
         $("#manageUser").css("display", "block");
         $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
     });
     $("#linkPayment").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
         $("#ManageTableCar").css("display", "none");
         $("#manageCar").css("display", "none");
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "none");
         $("#paymentDetailsContent").css("display", "block");
-    });
-    $("#manageCarDetails").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "block");
-
-    });
-    $("#LinkBackToTable").click(function () {
-
-        $("#ManageTableCar").css("display", "block");
-        $("#manageCar").css("display", "none");
-
-    });
-    $("#linkMaintenance").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "none");
-        $("#mainteneceContent").css("display", "block");
-
-    });$("#linkRequest").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "none");
-        $("#mainteneceContent").css("display", "none");
-        $("#reqContent").css("display", "block");
-
-    });$("#linkRentalReturn").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "none");
-        $("#mainteneceContent").css("display", "none");
-        $("#reqContent").css("display", "none");
-        $("#responsesContent").css("display", "block");
-
-    });
-    $("#linkIncomeReport").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "none");
-        $("#mainteneceContent").css("display", "none");
-        $("#reqContent").css("display", "none");
-        $("#responsesContent").css("display", "none");
-        $("#incomeReportContent").css("display", "block");
-
-    });
-    $("#linkAdminDashBoard").click(function () {
-
-        $("#ManageTableCar").css("display", "none");
-        $("#manageCar").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
         $("#responsesContent").css("display", "none");
         $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+    });
+
+    $("#manageCarDetails").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
         $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "block");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
+    });
+    $("#LinkBackToTable").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "block");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
+    });
+    $("#linkMaintenance").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "block");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
+    });$("#linkRequest").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "block");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
+    });$("#linkRentalReturn").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "block");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
+
+    });
+    $("#linkIncomeReport").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "block");
+        $("#CarBookingContent").css("display", "none");
+
+    });
+    $("#linkAdminDashBoard").click(function () {
+
+        $("#dashBoardContent").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#aboutContent").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#CarBookingContent").css("display", "none");
 
     });
 
@@ -2348,6 +2537,7 @@
     $("#deleteDriverBtn").click(function (){
         deleteDriver();
     });
+
    function rentBokking(){
        $("#CarBookingContent").css("display","block");
         $("#dashBoardContent").css("display", "none");
@@ -2368,6 +2558,10 @@
         $("#incomeReportContent").css("display", "none");
 
     }
+    $("#changeUserType").click(function (){
+        console.log("Val"+$("#changeUserType").val()) ;
+        console.log("Text"+$("#changeUserType").text()) ;
+    });
 
 </script>
 </body>
