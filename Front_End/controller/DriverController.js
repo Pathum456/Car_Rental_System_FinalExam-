@@ -224,7 +224,7 @@ $('#driverLicenceNo').on('keyup', function () {
 
 $('#name').on('keyup', function () {
     var name = $('#name').val();
-    if (regName.test(name)) {
+    if (regNameD.test(name)) {
         $("#name").css('border', '2px solid green');
         return true;
     } else {
@@ -267,7 +267,7 @@ $('#nicNo').on('keyup', function () {
 });
 
 $('#driverUserName').on('keyup', function () {
-    var driverUserName = $('#nicNo').val();
+    var driverUserName = $('#driverUserName').val();
     if (regLoginUsernameD.test( driverUserName)) {
         $("#driverUserName").css('border', '2px solid green');
         return true;
@@ -279,7 +279,7 @@ $('#driverUserName').on('keyup', function () {
 
 $('#driverPassword').on('keyup', function () {
     var driverPassword = $('#nicNo').val();
-    if (regLoginUsernameD.test( driverPassword)) {
+    if (regLoginPasswordD.test( driverPassword)) {
         $("#driverPassword").css('border', '2px solid green');
         return true;
     } else {

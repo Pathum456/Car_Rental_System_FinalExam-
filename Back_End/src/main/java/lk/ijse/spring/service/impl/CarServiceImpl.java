@@ -93,4 +93,8 @@ public class CarServiceImpl implements CarService {
     public int getCountOfCarsByStatus(String status) {
         return repo.getCountOfCarsByStatus(status);
     }
+    @Override
+    public List<String> getCarRegistrationNumbersByType(String type) {
+        return repo.getCarRegistrationNoByType(type);
+    }
 }

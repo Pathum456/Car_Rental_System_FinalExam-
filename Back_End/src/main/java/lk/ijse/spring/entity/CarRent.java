@@ -24,9 +24,9 @@ import java.time.LocalDate;
 public class CarRent {
     @Id
     private String rentId;
-    private LocalDate date;
-    private LocalDate pickUpDate;
-    private LocalDate returnDate;
+    private String  date;
+    private String pickUpDate;
+    private String returnDate;
     private String status;
 
     @ManyToOne
@@ -38,6 +38,6 @@ public class CarRent {
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "licenceNo", referencedColumnName = "licenceNo", nullable = false)
+    @JoinColumn(name = "licenceNo", referencedColumnName = "licenceNo")
     private Driver driver;
 }

@@ -48,7 +48,7 @@ function addCar() {
         data: JSON.stringify(car),
         success: function (resp) {
             uploadCarImages(carID);
-            loadAllCarsTable();
+            //loadAllCarsTable();
             alert(resp.message);
         },
         error: function (ob) {
@@ -151,8 +151,9 @@ function loadAllCarsTable() {
                 <td class="col-3">
                     <div class="card-body">
                         <h5 class="card-title">${car.brand} </h5>
-                        <p class="card-text">Good Condition,Max seed 140,
-                            Rent Price for 30 days 870$.</p>
+                        <br>
+                      
+                      
                     </div>
                 </td>
                  <td class="col-3">
@@ -160,21 +161,26 @@ function loadAllCarsTable() {
                         <li class="list-group-item">No of Passengers : <b>${car.noOfPassengers}</b></li>
                         <li class="list-group-item">Transmission Type : <b>${car.transmissionType}</b></li>
                         <li class="list-group-item">Fuel Type : <b> ${car.fuelType}</b></li>
+                        <li class="list-group-item">Color : <b> ${car.color}</b></li>
+                        <li class="list-group-item">Free Duration : <b> ${car.freeKmForDuration} KM</b></li>
+                        <li class="list-group-item">Extra 1Km charge : <b> ${car.freeKmForPrice} LKR</b></li>
                     </ul>
                 </td>
                  <td class="col-2">
                     <ul>
-                        <li class="list-group-item"><b>${car.dailyRate}$/day</b></li>
+                        <li class="list-group-item"><b>${car.dailyRate} LKR/per day</b></li>
+                        <br>
+                        <li class="list-group-item"><b>${car.monthlyRate} LKR/per month</b></li>
                     </ul>
                 </td>
                  <td class="col-1">
-                    <button class="rentCarBtn" type="button" onclick="this.rentBokking()">Rent Car</button>
+                    <button class="rentCarBtn" type="button">Rent Car</button>
                 </td>
                 </tr>`;
                 $("#tblCarJson").append(row);
 
 
-            }
+            }bookingFormOpen();
         }
     });
 
@@ -197,7 +203,12 @@ function loadDataCarManageTable() {
         }
     });
 }
+function bookingFormOpen(){
+$(".rentCarBtn").click(function (){
+    rentBokking();
+});
 
+}
 
 function setCarDataToFields() {
     $("#tblCarManageJson>tr").click(function () {
@@ -210,6 +221,7 @@ function setCarDataToFields() {
                     var car = res.data;
                     $('#carRegisterId').val(car.registrationNO);
                     $('#carBrand').val(car.brand);
+                    $('#carType').val(car.type);
                     $('#carColor').val(car.color);
                     $('#fuelType').val(car.fuelType);
                     $('#carTransmissionType').val(car.transmissionType);
@@ -221,40 +233,15 @@ function setCarDataToFields() {
                     $('#lossDamageWaiver').val(car.lossDamageWaiver);
                     $('#priceOfExtraKM').val(car.priceForExtraKm);
                     $('#completeKm').val(car.completeKm);
-                    alert("Data Fix in Fields");
+
                 }
+
+                    alert("Data Fix in Fields");
+
             }
         });
     });
 
-    /*let frontViewPath = car.frontViewImg;
-    console.log(frontViewPath);
-    let frontViewImg = frontViewPath.split("/media/kaleesha/Working_Space/Car_Rental_System_FinalExam/Front_End/Saved_Images/Cars")[1];
-    let FrontViewImgSrc = "savedImages/Cars/" + frontViewImg;
 
-    let backViewPath = car.backViewImg;
-    let backViewImg = backViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
-    let backViewImgSrc = "savedImages\\Cars\\" + backViewImg;
-    console.log(backViewImgSrc);
-
-    let sideViewPath = car.sideViewImg;
-    let sideViewImg = sideViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
-    let sideViewImgSrc = "savedImages\\Cars\\" + sideViewImg;
-
-    let interiorViewPath = car.internalViewImg;
-    let interiorViewImg = interiorViewPath.split("D:\\GDSE\\2nd sem Final\\Easy-Car-Rent-System\\Front_End\\savedImages\\Cars\\")[1];
-    let interiorViewImgSrc = "savedImages\\Cars\\" + interiorViewImg;
-
-    let fvImg = `<img src=${FrontViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
-    $('#divCarFrontView').append(fvImg);
-
-    let bvImg = `<img src=${backViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
-    $('#divCarBackView').append(bvImg);
-
-    let svImg = `<img src=${sideViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
-    $('#divCarSideView').append(svImg);
-
-    let ivImg = `<img src=${interiorViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
-    $('#divCarInteriorView').append(ivImg);*/
 }
 

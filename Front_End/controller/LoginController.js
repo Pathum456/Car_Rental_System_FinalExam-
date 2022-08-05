@@ -40,8 +40,9 @@ function searchAdmin(userType, username, password) {
                     $("#serviceContent").css("display", "none");
                     $("#adminDash").css("display", "block");
                     $("#ManageTableCar").css("display", "none");
+
                 } else {
-                    alert(res.massage);
+                    alert(res.message);
                 }
             }
         });
@@ -76,10 +77,11 @@ function searchCustomer(userType, username, password) {
                 console.log(res.password);
                 if (res.data === true) {
                     logincar();
-                    alert(res.massage);
+                    setTimeout(getLastLoginUser,1500);
+                    alert(res.message);
                 } else {
 
-                    alert(res.massage);
+                    alert(res.message);
                 }
             }
         });

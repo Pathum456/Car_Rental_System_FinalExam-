@@ -93,4 +93,8 @@ public class DriverController {
     public ResponseUtil getCountOfCustomersByAvailability(@PathVariable boolean availability){
         return new ResponseUtil(200,"Ok",service.getCountOfDriversByStatus(availability));
     }
+    @GetMapping(path = "/getRandomDriver",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getRandomDriver(){
+        return new ResponseUtil(200,"Ok",service.getRandomDriver());
+    }
 }

@@ -1295,6 +1295,7 @@
         <div>
             <h1>Booking Request</h1>
         </div>
+        <input type="text" class="form-control" id="txtCustId" name="paymentAmount" style="visibility: hidden">
         <div class="row p-3">
             <h3 class="h3  p-2 bg-primary text-black">Car and Driver Details</h3>
             <div class="col-2">
@@ -2099,6 +2100,7 @@
 <script src="controller/DriverController.js"></script>
 <script src="controller/CarController.js"></script>
 <script src="controller/CustomerMannageController.js"></script>
+<script src="controller/RentCarBookingController.js"></script>
 <script>
 
 
@@ -2537,6 +2539,8 @@
     });
     $("#deleteDriverBtn").click(function (){
         deleteDriver();
+    }); $(".rentCarBtn").click(function (){
+        rentBokking();
     });
 
    function rentBokking(){
